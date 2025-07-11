@@ -1,0 +1,59 @@
+  /* Scrollable container if table overflows */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+/* Base table styling */
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  color: #222;
+  background-color: transparent;
+  table-layout: auto;
+}
+
+/* Header cells */
+.table-responsive th {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  white-space: nowrap; /* Don&#39;t wrap header text */
+}
+
+
+  
+
+/* Data cells */
+.table-responsive td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  background-color: #fff5f5; /* Soft pinkish-red tone */
+  color: #222;
+  white-space: normal;
+  word-break: keep-all;   /* Do not break words */
+  line-height: 1.6;
+}
+
+/* Zebra striping for better scanability */
+.table-responsive tr:nth-child(even) td {
+  background-color: #ffeeee;
+}
+
+/* Optional: Hover effect to help focus */
+.table-responsive tbody tr:hover td {
+  background-color: #ffe0e0;
+}  
+  
+
+/* Mobile tweaks */
+@media screen and (max-width: 768px) {
+  .table-responsive table {
+    font-size: 15px;
+    min-width: 100%;
+  }
+} 
