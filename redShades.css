@@ -19,6 +19,10 @@ h3 {
   padding-left: 0.5em;
 }
 
+
+
+
+
 /* Blockquotes */
 .post-body blockquote {
   font-family: 'Georgia', serif;
@@ -29,7 +33,7 @@ h3 {
   margin: 1em 1em;
   padding: 0.5em 1em;
   border-radius: 6px;
-  font-size: 0.95em; /* slightly smaller than normal text */
+  font-size: 0.95em !important; /* slightly smaller than normal text */
   line-height: 1.5;
 }
   
