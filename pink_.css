@@ -125,14 +125,14 @@
   margin: 1.5em 0;
 }
 
-/* Modern table: warm, clean, readable */
+/* Updated table styling: warm, lighter pink transparent look */
 .post-body table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
   font-size: 0.95em;
-  background-color: #fffaf7;
-  border: 1px solid #e0d6d1;
+  background-color: rgba(255, 240, 240, 0.6); /* very light pink with transparency */
+  border: 1px solid rgba(230, 184, 184, 0.5); /* subtle border */
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
@@ -140,28 +140,31 @@
 .post-body td {
   padding: 0.75em;
   text-align: left;
-  border: 1px solid #e0d6d1;
+  border: 1px solid rgba(230, 184, 184, 0.4); /* subtle inner border */
+  background-color: rgba(255, 248, 248, 0.6); /* even lighter pink, keeps rows readable */
 }
 
 .post-body th {
-  background-color: #f4e8e3;
+  background-color: rgba(244, 232, 232, 0.7); /* slightly stronger pinkish header */
   color: #4d2600;
   font-weight: bold;
 }
 
-.post-body tr:nth-child(even) {
-  background-color: #faf4f0;
+.post-body tr:nth-child(even) td {
+  background-color: rgba(255, 243, 243, 0.6); /* alternate row for contrast */
 }
 
-.post-body tr:hover {
-  background-color: #f1e0da;
+.post-body tr:hover td {
+  background-color: rgba(241, 224, 224, 0.7); /* soft warm hover */
   transition: background-color 0.3s ease;
 }
 
-/* Responsive scrollable table */
+/* Keep responsive scrollable */
 .post-body .table-responsive {
   overflow-x: auto;
 }
+
+
 
 /* Images with captions */
 .post-body figure {
