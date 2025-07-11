@@ -1,67 +1,170 @@
+/* Typography */
+.post-body {
+  font-family: 'Georgia', serif;
+  color: #2b2b2b;
+  font-size: 1.05em;
+  line-height: 1.75;
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
+  background: #fffdfa;
+}
 
 /* Headings */
 .post-body h2 {
   font-family: 'Georgia', serif;
-  color: #b30000; /* deep warm red */
-  text-align: left;
+  color: #a61a1a;
   font-size: 1.8em;
   margin: 1.5em 0 0.8em;
-  border-bottom: 2px solid #e6b8b8; /* lighter red shade */
+  border-bottom: 2px solid #eebbbb;
   padding-bottom: 0.3em;
 }
 
 .post-body h3 {
   font-family: 'Georgia', serif;
-  color: #cc3333; /* slightly lighter red */
+  color: #bf3030;
   font-size: 1.4em;
   margin: 1.2em 0 0.5em;
-  border-left: 4px solid #e6b8b8;
-  padding-left: 0.5em;
+  border-left: 4px solid #eebbbb;
+  padding-left: 0.6em;
 }
 
-
-
-
-
-/* Blockquotes */
-.post-body blockquote,
-.post-body blockquote p,
-.post-body blockquote em,
-.post-body blockquote * {
+.post-body h4, .post-body h5, .post-body h6 {
   font-family: 'Georgia', serif;
-  font-style: italic;
-  color: #4d0000; /* dark reddish-brown */
-  background-color: #fff5f5; /* very light red/pinkish background */
-  border-left: 4px solid #cc3333;
-  margin: 1em 1em;
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  font-size: 0.95em !important; /* slightly smaller than normal text */
-  line-height: 1.5;
+  color: #993333;
+  margin: 1em 0 0.5em;
 }
-  
 
 /* Paragraphs */
 .post-body p {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #2b2b2b;
-  line-height: 1.6;
-  margin: 0.5em 0;
-  font-size: 1em;
+  margin: 0.8em 0;
 }
 
-/* Bold speaker names & emphasis */
+/* Blockquotes */
+.post-body blockquote {
+  font-style: italic;
+  color: #4d0000;
+  background: #fff5f5;
+  border-left: 4px solid #cc3333;
+  margin: 1em 0;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+  font-size: 0.97em;
+}
+
+/* Bold & Emphasis */
 .post-body strong {
-  color: #800000; /* warm medium red */
+  color: #800000;
 }
-
 .post-body em {
-  color: #5c0000; /* slightly darker tone for stage directions */
+  color: #660000;
 }
 
-/* Horizontal rules */
+/* Lists */
+.post-body ul, .post-body ol {
+  margin: 1em 0 1em 1.5em;
+}
+.post-body li {
+  margin-bottom: 0.4em;
+}
+
+/* Horizontal Rule */
 .post-body hr {
   border: none;
-  border-top: 1px solid #e6b8b8;
+  border-top: 1px solid #eebbbb;
+  margin: 2em 0;
+}
+
+/* Tables */
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
   margin: 1.5em 0;
+  font-size: 0.95em;
+}
+.post-body table th,
+.post-body table td {
+  border: 1px solid #f0cccc;
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+.post-body table th {
+  background: #f9e2e2;
+  color: #4d0000;
+}
+.post-body table tr:nth-child(even) {
+  background: #fff7f7;
+}
+
+/* Images */
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+  display: block;
+}
+
+/* Captions */
+.post-body figcaption {
+  font-size: 0.9em;
+  color: #7a0000;
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+/* Code */
+.post-body code, .post-body pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  background: #fff0f0;
+  color: #800000;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+.post-body pre {
+  overflow-x: auto;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .post-body {
+    font-size: 1em;
+    padding: 0 0.8rem;
+  }
+  .post-body h2 { font-size: 1.6em; }
+  .post-body h3 { font-size: 1.3em; }
+}
+@media (max-width: 480px) {
+  .post-body {
+    font-size: 0.98em;
+  }
+  .post-body h2 { font-size: 1.4em; }
+  .post-body h3 { font-size: 1.2em; }
+}
+
+/* Links */
+.post-body a {
+  color: #b30000;
+  text-decoration: underline;
+}
+.post-body a:hover {
+  color: #660000;
+}
+
+/* Quotes inside quotes, nested blockquote styling */
+.post-body blockquote blockquote {
+  background: #fceaea;
+  border-left-color: #b30000;
+}
+
+/* Remove underline from headings if linked */
+.post-body h2 a, .post-body h3 a, .post-body h4 a {
+  text-decoration: none;
+  color: inherit;
+}
+.post-body h2 a:hover, .post-body h3 a:hover, .post-body h4 a:hover {
+  color: #660000;
 }
