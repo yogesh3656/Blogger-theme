@@ -125,43 +125,49 @@
   margin: 1.5em 0;
 }
 
-/* Updated table styling: warm, lighter pink transparent look */
+/* ✅ Make tables scroll horizontally if too wide */
+.post-body {
+  overflow-x: auto;
+}
+
+/* ✅ Keep table natural width: if content is wide, table is wide */
 .post-body table {
-  width: 100%;
+  width: auto;                /* natural width based on content */
+  min-width: 100%;            /* always at least container width */
   border-collapse: collapse;
-  margin: 1em 0;
-  font-size: 0.95em;
-  background-color: rgba(255, 240, 240, 0.6); /* very light pink with transparency */
-  border: 1px solid rgba(230, 184, 184, 0.5); /* subtle border */
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background-color: rgba(255, 182, 193, 0.08); /* very light pink transparent */
+  table-layout: auto;         /* let columns size naturally */
 }
 
-.post-body th,
-.post-body td {
-  padding: 0.75em;
+/* ✅ Keep words/numbers in one line (don't break words) */
+.post-body table td,
+.post-body table th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid rgba(244, 194, 194, 0.7);
+  padding: 0.5em;
   text-align: left;
-  border: 1px solid rgba(230, 184, 184, 0.4); /* subtle inner border */
-  background-color: rgba(255, 248, 248, 0.6); /* even lighter pink, keeps rows readable */
 }
 
-.post-body th {
-  background-color: rgba(244, 232, 232, 0.7); /* slightly stronger pinkish header */
-  color: #4d2600;
+/* ✅ Table header styling */
+.post-body table th {
+  background: rgba(255, 182, 193, 0.15);
   font-weight: bold;
 }
 
-.post-body tr:nth-child(even) td {
-  background-color: rgba(255, 243, 243, 0.6); /* alternate row for contrast */
+/* ✅ Hover row effect */
+.post-body table tr:hover {
+  background: rgba(255, 182, 193, 0.2);
 }
 
-.post-body tr:hover td {
-  background-color: rgba(241, 224, 224, 0.7); /* soft warm hover */
-  transition: background-color 0.3s ease;
+/* ✅ Optional: prettier scrollbar (WebKit browsers) */
+.post-body::-webkit-scrollbar {
+  height: 6px;
 }
-
-/* Keep responsive scrollable */
-.post-body .table-responsive {
-  overflow-x: auto;
+.post-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 193, 0.5);
+  border-radius: 3px;
 }
 
 
