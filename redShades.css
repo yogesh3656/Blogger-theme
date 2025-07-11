@@ -1,6 +1,6 @@
 
 /* Headings */
-h2 {
+.post-body h2 {
   font-family: 'Georgia', serif;
   color: #b30000; /* deep warm red */
   text-align: center;
@@ -10,7 +10,7 @@ h2 {
   padding-bottom: 0.3em;
 }
 
-h3 {
+.post-body h3 {
   font-family: 'Georgia', serif;
   color: #cc3333; /* slightly lighter red */
   font-size: 1.4em;
@@ -42,7 +42,7 @@ h3 {
   
 
 /* Paragraphs */
-p {
+.post-body p {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #2b2b2b;
   line-height: 1.6;
@@ -51,16 +51,16 @@ p {
 }
 
 /* Bold speaker names & emphasis */
-strong {
+.post-body strong {
   color: #800000; /* warm medium red */
 }
 
-em {
+.post-body em {
   color: #5c0000; /* slightly darker tone for stage directions */
 }
 
 /* Horizontal rules */
-hr {
+.post-body hr {
   border: none;
   border-top: 1px solid #e6b8b8;
   margin: 1.5em 0;
