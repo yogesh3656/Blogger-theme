@@ -1,4 +1,4 @@
-/* Apply only inside blogger post content */
+/** Base typography inside post **/
 .post-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #2b2b2b;
@@ -15,7 +15,9 @@
   margin: 1.5em 0 0.8em;
   border-bottom: 2px solid #e6b8b8;
   padding-bottom: 0.3em;
+  transition: font-size 0.3s ease;
 }
+
 .post-body h3 {
   font-family: 'Georgia', serif;
   color: #cc3333;
@@ -23,12 +25,30 @@
   margin: 1.2em 0 0.5em;
   border-left: 4px solid #e6b8b8;
   padding-left: 0.5em;
+  transition: font-size 0.3s ease, border-left 0.3s ease;
 }
+
 .post-body h4, .post-body h5, .post-body h6 {
   font-family: 'Georgia', serif;
-  color: #663300; /* warm brown to contrast reds */
+  color: #663300;
   font-size: 1.2em;
   margin: 1em 0 0.5em;
+  transition: font-size 0.3s ease;
+}
+
+/* Responsive heading scaling and remove vertical line on small screens */
+@media (max-width: 600px) {
+  .post-body h2 {
+    font-size: 1.5em;
+  }
+  .post-body h3 {
+    font-size: 1.2em;
+    border-left: none;
+    padding-left: 0;
+  }
+  .post-body h4, .post-body h5, .post-body h6 {
+    font-size: 1em;
+  }
 }
 
 /* Paragraphs */
@@ -60,45 +80,36 @@
 
 /* Links */
 .post-body a {
-  color: #994d00; /* warm brownish-orange */
+  color: #994d00;
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 .post-body a:hover {
   color: #663300;
 }
 
-/* Lists: bullet always on left */
-.post-body ul,
-.post-body ol {
+/* Lists */
+.post-body ul, .post-body ol {
   margin: 0.5em 0 0.5em 2em;
   padding: 0;
-  list-style-position: outside; /* bullet always left */
+  list-style-position: outside;
 }
-.post-body ul li,
-.post-body ol li {
+.post-body ul li, .post-body ol li {
   margin-bottom: 0.4em;
 }
-.post-body ul {
-  list-style-type: disc; /* classic round bullet */
-}
-.post-body ol {
-  list-style-type: decimal;
-}
-
-/* Customize bullet appearance: warm brown instead of black */
-.post-body ul li::marker {
-  color: #994d00;
-}
+.post-body ul { list-style-type: disc; }
+.post-body ol { list-style-type: decimal; }
+.post-body ul li::marker,
 .post-body ol li::marker {
   color: #994d00;
 }
 
-/* Code blocks and inline code */
+/* Code blocks & inline code */
 .post-body pre,
 .post-body code {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #f8f6f4; /* warm light beige */
-  color: #4d2600; /* dark brown */
+  background-color: #f9f6f3;
+  color: #4d2600;
   font-size: 0.95em;
   border-radius: 4px;
 }
@@ -107,32 +118,33 @@
   overflow-x: auto;
 }
 
-/* Horizontal rules */
+/* Horizontal rule */
 .post-body hr {
   border: none;
   border-top: 1px solid #e6b8b8;
   margin: 1.5em 0;
 }
 
-/* Tables: warm neutral look, no blue */
+/* Modern table: warm, clean, readable */
 .post-body table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
   font-size: 0.95em;
-  background-color: #fffaf7; /* light warm background */
-  border: 1px solid #e0d6d1; /* soft beige border */
+  background-color: #fffaf7;
+  border: 1px solid #e0d6d1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .post-body th,
 .post-body td {
-  padding: 0.6em;
+  padding: 0.75em;
   text-align: left;
   border: 1px solid #e0d6d1;
 }
 
 .post-body th {
-  background-color: #f4e8e3; /* subtle warm highlight */
+  background-color: #f4e8e3;
   color: #4d2600;
   font-weight: bold;
 }
@@ -142,10 +154,11 @@
 }
 
 .post-body tr:hover {
-  background-color: #f1e0da; /* soft warm hover */
+  background-color: #f1e0da;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsive tables */
+/* Responsive scrollable table */
 .post-body .table-responsive {
   overflow-x: auto;
 }
@@ -161,13 +174,12 @@
   margin-top: 0.3em;
 }
 
-/* Additional text tags for richer semantics */
+/* Text tags for clarity & warmth */
 .post-body abbr {
   text-decoration: underline dotted;
   cursor: help;
   color: #800000;
 }
-
 .post-body kbd {
   background-color: #eee;
   border: 1px solid #ccc;
@@ -175,50 +187,33 @@
   padding: 0.1em 0.3em;
   font-family: monospace;
   font-size: 0.95em;
-  color: #333;
 }
-
 .post-body samp,
 .post-body var {
   font-family: monospace;
   color: #4d2600;
-  font-size: 0.95em;
 }
-
 .post-body cite,
 .post-body dfn {
   font-style: italic;
   color: #663300;
 }
-
 .post-body sup,
 .post-body sub {
   font-size: 0.8em;
   line-height: 0;
-  vertical-align: baseline;
   position: relative;
 }
+.post-body sup { top: -0.5em; }
+.post-body sub { top: 0.2em; }
 
-.post-body sup {
-  top: -0.5em;
-}
-.post-body sub {
-  top: 0.2em;
-}
-
-/* Highlight text */
+/* Highlights & edits */
 .post-body mark {
-  background-color: #fff0b3; /* warm light yellow */
+  background-color: #fff0b3;
 }
-
-/* Deleted text */
-.post-body del {
-  color: #999;
-}
-
-/* Inserted text */
+.post-body del { color: #999; }
 .post-body ins {
   text-decoration: none;
-  border-bottom: 2px solid #cc9966; /* muted warm color */
+  border-bottom: 2px solid #cc9966;
   color: #4d2600;
 }
