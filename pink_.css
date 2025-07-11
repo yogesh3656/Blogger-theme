@@ -1,0 +1,219 @@
+/** Base typography inside post **/
+.post-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* Headings */
+.post-body h2 {
+  font-family: 'Georgia', serif;
+  color: #b30000;
+  text-align: center;
+  font-size: 1.8em;
+  margin: 1.5em 0 0.8em;
+  border-bottom: 2px solid #e6b8b8;
+  padding-bottom: 0.3em;
+  transition: font-size 0.3s ease;
+}
+
+.post-body h3 {
+  font-family: 'Georgia', serif;
+  color: #cc3333;
+  font-size: 1.4em;
+  margin: 1.2em 0 0.5em;
+  border-left: 4px solid #e6b8b8;
+  padding-left: 0.5em;
+  transition: font-size 0.3s ease, border-left 0.3s ease;
+}
+
+.post-body h4, .post-body h5, .post-body h6 {
+  font-family: 'Georgia', serif;
+  color: #663300;
+  font-size: 1.2em;
+  margin: 1em 0 0.5em;
+  transition: font-size 0.3s ease;
+}
+
+/* Responsive heading scaling and remove vertical line on small screens */
+@media (max-width: 600px) {
+  .post-body h2 {
+    font-size: 1.5em;
+  }
+  .post-body h3 {
+    font-size: 1.2em;
+    border-left: none;
+    padding-left: 0;
+  }
+  .post-body h4, .post-body h5, .post-body h6 {
+    font-size: 1em;
+  }
+}
+
+/* Paragraphs */
+.post-body p {
+  margin: 0.5em 0;
+}
+
+/* Blockquotes */
+.post-body blockquote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #4d0000;
+  background-color: #fff5f5;
+  border-left: 4px solid #cc3333;
+  margin: 1em 1em;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Emphasis */
+.post-body strong {
+  color: #800000;
+}
+.post-body em {
+  color: #5c0000;
+}
+
+/* Links */
+.post-body a {
+  color: #994d00;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.post-body a:hover {
+  color: #663300;
+}
+
+/* Lists */
+.post-body ul, .post-body ol {
+  margin: 0.5em 0 0.5em 2em;
+  padding: 0;
+  list-style-position: outside;
+}
+.post-body ul li, .post-body ol li {
+  margin-bottom: 0.4em;
+}
+.post-body ul { list-style-type: disc; }
+.post-body ol { list-style-type: decimal; }
+.post-body ul li::marker,
+.post-body ol li::marker {
+  color: #994d00;
+}
+
+/* Code blocks & inline code */
+.post-body pre,
+.post-body code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f9f6f3;
+  color: #4d2600;
+  font-size: 0.95em;
+  border-radius: 4px;
+}
+.post-body pre {
+  padding: 0.8em;
+  overflow-x: auto;
+}
+
+/* Horizontal rule */
+.post-body hr {
+  border: none;
+  border-top: 1px solid #e6b8b8;
+  margin: 1.5em 0;
+}
+
+/* Modern table: warm, clean, readable */
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  background-color: #fffaf7;
+  border: 1px solid #e0d6d1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.post-body th,
+.post-body td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid #e0d6d1;
+}
+
+.post-body th {
+  background-color: #f4e8e3;
+  color: #4d2600;
+  font-weight: bold;
+}
+
+.post-body tr:nth-child(even) {
+  background-color: #faf4f0;
+}
+
+.post-body tr:hover {
+  background-color: #f1e0da;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive scrollable table */
+.post-body .table-responsive {
+  overflow-x: auto;
+}
+
+/* Images with captions */
+.post-body figure {
+  margin: 1em auto;
+  text-align: center;
+}
+.post-body figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.3em;
+}
+
+/* Text tags for clarity & warmth */
+.post-body abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+  color: #800000;
+}
+.post-body kbd {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-family: monospace;
+  font-size: 0.95em;
+}
+.post-body samp,
+.post-body var {
+  font-family: monospace;
+  color: #4d2600;
+}
+.post-body cite,
+.post-body dfn {
+  font-style: italic;
+  color: #663300;
+}
+.post-body sup,
+.post-body sub {
+  font-size: 0.8em;
+  line-height: 0;
+  position: relative;
+}
+.post-body sup { top: -0.5em; }
+.post-body sub { top: 0.2em; }
+
+/* Highlights & edits */
+.post-body mark {
+  background-color: #fff0b3;
+}
+.post-body del { color: #999; }
+.post-body ins {
+  text-decoration: none;
+  border-bottom: 2px solid #cc9966;
+  color: #4d2600;
+}
