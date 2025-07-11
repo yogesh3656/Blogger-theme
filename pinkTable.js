@@ -1,4 +1,4 @@
-<script>
+
 window.addEventListener("load", function(){
   document.querySelectorAll(".post-body table").forEach(function(table){
     if (!table.parentNode.classList.contains("table-responsive")) {
@@ -9,4 +9,4 @@ window.addEventListener("load", function(){
     }
   });
 });
-</script>
+
