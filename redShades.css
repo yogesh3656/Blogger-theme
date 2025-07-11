@@ -1,170 +1,208 @@
-/* RESET & BASE STYLES */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-  background-color: #fff;
-  line-height: 1.6;
-  padding: 1rem;
-  max-width: 1000px;
+/* Base Typography */
+.post-body {
+  font-family: 'Georgia', serif;
+  color: #2c2c2c; /* dark neutral gray for comfortable reading */
+  font-size: 1.05em;
+  line-height: 1.75;
+  max-width: 800px;
   margin: auto;
+  padding: 0 1rem;
+  background: #fffdfa;
 }
 
-/* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: #d6336c; /* Pink accent from Contempo Pink */
-  margin: 1.2rem 0 0.6rem;
-  line-height: 1.25;
+/* Headings (warm red as accent) */
+.post-body h2 {
+  color: #a12a2a;
+  font-size: 1.8em;
+  margin: 1.5em 0 0.8em;
+  border-bottom: 2px solid #eebbbb;
+  padding-bottom: 0.3em;
 }
 
-p {
-  margin-bottom: 1rem;
+.post-body h3 {
+  color: #bf3030;
+  font-size: 1.4em;
+  margin: 1.2em 0 0.5em;
+  border-left: 4px solid #eebbbb;
+  padding-left: 0.6em;
 }
 
-a {
-  color: #d6336c;
-  text-decoration: none;
-  transition: color 0.2s;
+.post-body h4, .post-body h5, .post-body h6 {
+  color: #993333;
+  margin: 1em 0 0.5em;
 }
 
-a:hover {
-  color: #a81e4f;
-  text-decoration: underline;
+/* Paragraphs */
+.post-body p {
+  margin: 0.8em 0;
 }
 
-small {
-  font-size: 0.85rem;
-}
-
-strong, b {
-  font-weight: bold;
-}
-
-em, i {
+/* Blockquotes */
+.post-body blockquote {
   font-style: italic;
+  color: #4d0000;
+  background: #fff5f5;
+  border-left: 4px solid #cc3333;
+  margin: 1em 0;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+  font-size: 0.97em;
 }
 
-/* LISTS */
-ul, ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+/* Lists */
+.post-body ul, .post-body ol {
+  margin: 1em 0 1em 1.5em;
+}
+.post-body li {
+  margin-bottom: 0.4em;
 }
 
-li {
-  margin-bottom: 0.4rem;
+/* Horizontal Rule */
+.post-body hr {
+  border: none;
+  border-top: 1px solid #eebbbb;
+  margin: 2em 0;
 }
 
-/* BLOCKQUOTE */
-blockquote {
-  border-left: 4px solid #d6336c;
-  padding-left: 1rem;
-  color: #555;
-  margin: 1rem 0;
-  font-style: italic;
-  background: #f9f9f9;
-}
-
-/* CODE & PRE */
-code {
-  font-family: 'Courier New', Courier, monospace;
-  background: #f4f4f4;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-}
-
-pre {
-  background: #f4f4f4;
-  padding: 1rem;
-  overflow-x: auto;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-/* TABLES */
-table {
+/* Tables */
+.post-body table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1rem;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+}
+.post-body th,
+.post-body td {
+  border: 1px solid #f0cccc;
+  padding: 0.6em 0.8em;
+}
+.post-body th {
+  background: #f9e2e2;
+  color: #4d0000;
+}
+.post-body tr:nth-child(even) {
+  background: #fffafa;
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 0.75rem;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-/* IMAGES */
-img {
+/* Images */
+.post-body img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
   display: block;
-  margin: 1rem 0;
-  border-radius: 6px;
 }
 
-/* FORMS */
-input, textarea, select, button {
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
+/* Captions & additional elements */
+.post-body figcaption,
+.post-body .caption,
+.post-body .footnote {
+  font-size: 0.9em;
+  color: #5a5a5a;
+  text-align: center;
+  margin-top: 0.4em;
+  font-style: italic;
+}
+
+/* Code & Keyboard Input */
+.post-body code, .post-body pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  background: #f8f8f8;
+  color: #333;
+  padding: 0.2em 0.4em;
   border-radius: 4px;
-  width: 100%;
+}
+.post-body pre {
+  overflow-x: auto;
+  padding: 1em;
+  margin: 1em 0;
+  background: #f2f2f2;
+}
+.post-body kbd {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0 0.2em;
+  font-size: 0.9em;
+  font-family: monospace;
 }
 
-button {
-  background-color: #d6336c;
-  color: white;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.2s;
+/* Superscript & Subscript */
+.post-body sup, .post-body sub {
+  font-size: 0.8em;
+  line-height: 0;
 }
 
-button:hover {
-  background-color: #a81e4f;
+/* Abbreviation */
+.post-body abbr {
+  border-bottom: 1px dotted #999;
+  cursor: help;
 }
 
-/* HR */
-hr {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 2rem 0;
+/* Marked text / highlights */
+.post-body mark {
+  background: #fff0f0;
+  color: #800000;
 }
 
-/* RESPONSIVE */
+/* Pullquotes */
+.post-body .pullquote {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 1.5em auto;
+  padding: 0.5em 1em;
+  border-left: 4px solid #cc3333;
+  background: #fff5f5;
+  color: #4d0000;
+  max-width: 600px;
+}
+
+/* Strong & Emphasis */
+.post-body strong {
+  color: #333; /* dark gray instead of red */
+}
+.post-body em {
+  color: #444;
+}
+
+/* Links */
+.post-body a {
+  color: #b30000;
+  text-decoration: underline;
+}
+.post-body a:hover {
+  color: #660000;
+}
+
+/* Nested blockquote */
+.post-body blockquote blockquote {
+  background: #fceaea;
+  border-left-color: #b30000;
+}
+
+/* Remove underline from headings if linked */
+.post-body h2 a, .post-body h3 a, .post-body h4 a {
+  text-decoration: none;
+  color: inherit;
+}
+.post-body h2 a:hover, .post-body h3 a:hover, .post-body h4 a:hover {
+  color: #660000;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  body {
-    font-size: 15px;
-    padding: 0.8rem;
+  .post-body {
+    font-size: 1em;
+    padding: 0 0.8rem;
   }
-
-  h1 {
-    font-size: 1.8rem;
+  .post-body h2 { font-size: 1.6em; }
+  .post-body h3 { font-size: 1.3em; }
+}
+@media (max-width: 480px) {
+  .post-body {
+    font-size: 0.98em;
   }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
+  .post-body h2 { font-size: 1.4em; }
+  .post-body h3 { font-size: 1.2em; }
 }
