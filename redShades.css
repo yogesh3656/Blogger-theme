@@ -1,38 +1,36 @@
-/* Typography */
+/* Base layout and typography */
 .post-body {
   font-family: 'Georgia', serif;
-  color: #2b2b2b;
+  color: #2c2c2c;
+  background: #fffaf8; /* warm light beige */
   font-size: 1.05em;
   line-height: 1.75;
   max-width: 800px;
   margin: auto;
   padding: 0 1rem;
-  background: #fffdfa;
 }
 
 /* Headings */
 .post-body h2 {
-  font-family: 'Georgia', serif;
-  color: #a61a1a;
+  color: #a61919;
   font-size: 1.8em;
   margin: 1.5em 0 0.8em;
-  border-bottom: 2px solid #eebbbb;
+  border-bottom: 2px solid #eab8b8;
   padding-bottom: 0.3em;
+  text-align: left;
 }
 
 .post-body h3 {
-  font-family: 'Georgia', serif;
-  color: #bf3030;
+  color: #b22222;
   font-size: 1.4em;
-  margin: 1.2em 0 0.5em;
-  border-left: 4px solid #eebbbb;
-  padding-left: 0.6em;
+  margin: 1.2em 0 0.6em;
+  text-align: left;
 }
 
 .post-body h4, .post-body h5, .post-body h6 {
-  font-family: 'Georgia', serif;
   color: #993333;
   margin: 1em 0 0.5em;
+  font-size: 1.2em;
 }
 
 /* Paragraphs */
@@ -60,12 +58,24 @@
   color: #660000;
 }
 
-/* Lists */
+/* Lists: no default dots; add custom small circle marker */
 .post-body ul, .post-body ol {
-  margin: 1em 0 1em 1.5em;
+  list-style: none;
+  margin: 1em 0;
+  padding-left: 0;
 }
 .post-body li {
+  position: relative;
+  padding-left: 1.2em;
   margin-bottom: 0.4em;
+}
+.post-body li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #cc3333;
+  font-size: 0.9em;
+  line-height: 1.6;
 }
 
 /* Horizontal Rule */
@@ -96,17 +106,19 @@
   background: #fff7f7;
 }
 
-/* Images */
-.post-body img {
+/* Images & media */
+.post-body img, 
+.post-body video, 
+.post-body iframe {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
   margin: 1em 0;
   display: block;
 }
 
 /* Captions */
-.post-body figcaption {
+.post-body figcaption, .post-body .caption {
   font-size: 0.9em;
   color: #7a0000;
   text-align: center;
@@ -114,7 +126,7 @@
 }
 
 /* Code */
-.post-body code, .post-body pre {
+.post-body code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95em;
   background: #fff0f0;
@@ -123,9 +135,62 @@
   border-radius: 4px;
 }
 .post-body pre {
-  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  background: #fff0f0;
+  color: #800000;
   padding: 1em;
+  overflow-x: auto;
+  border-radius: 6px;
   margin: 1em 0;
+  font-size: 0.95em;
+}
+
+/* Links */
+.post-body a {
+  color: #b30000;
+  text-decoration: underline;
+}
+.post-body a:hover {
+  color: #660000;
+}
+
+/* Nested blockquotes */
+.post-body blockquote blockquote {
+  background: #fceaea;
+  border-left-color: #b30000;
+}
+
+/* Remove underline from linked headings */
+.post-body h2 a, .post-body h3 a, .post-body h4 a {
+  text-decoration: none;
+  color: inherit;
+}
+.post-body h2 a:hover, .post-body h3 a:hover, .post-body h4 a:hover {
+  color: #660000;
+}
+
+/* Additional tags: definition lists, mark, sub, sup */
+.post-body dl, .post-body dd, .post-body dt {
+  margin: 0.5em 0;
+}
+.post-body mark {
+  background: #f9e2e2;
+  color: #800000;
+}
+.post-body sub, .post-body sup {
+  font-size: 0.8em;
+}
+
+/* Figure */
+.post-body figure {
+  margin: 1.5em auto;
+  text-align: center;
+}
+
+/* Audio & video styling */
+.post-body audio, .post-body video {
+  display: block;
+  margin: 1em auto;
 }
 
 /* Responsive adjustments */
@@ -143,28 +208,4 @@
   }
   .post-body h2 { font-size: 1.4em; }
   .post-body h3 { font-size: 1.2em; }
-}
-
-/* Links */
-.post-body a {
-  color: #b30000;
-  text-decoration: underline;
-}
-.post-body a:hover {
-  color: #660000;
-}
-
-/* Quotes inside quotes, nested blockquote styling */
-.post-body blockquote blockquote {
-  background: #fceaea;
-  border-left-color: #b30000;
-}
-
-/* Remove underline from headings if linked */
-.post-body h2 a, .post-body h3 a, .post-body h4 a {
-  text-decoration: none;
-  color: inherit;
-}
-.post-body h2 a:hover, .post-body h3 a:hover, .post-body h4 a:hover {
-  color: #660000;
 }
