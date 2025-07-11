@@ -1,205 +1,170 @@
-/* Base layout and typography */
-.post-body {
-  font-family: 'Georgia', serif;
-  color: #333333; /* dark neutral for readability */
-  background: #fffaf8; /* warm light beige */
-  font-size: 1.05em;
-  line-height: 1.75;
-  max-width: 800px;
-  margin: auto;
-  padding: 0 1rem;
+/* RESET & BASE STYLES */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Headings */
-.post-body h2 {
-  color: #a61919; /* warm red accent */
-  font-size: 1.8em;
-  margin: 1.5em 0 0.8em;
-  border-bottom: 2px solid #eab8b8;
-  padding-bottom: 0.3em;
-  text-align: left;
-}
-.post-body h3 {
-  color: #b22222;
-  font-size: 1.4em;
-  margin: 1.2em 0 0.6em;
-  text-align: left;
-}
-.post-body h4, .post-body h5, .post-body h6 {
-  color: #993333;
-  margin: 1em 0 0.5em;
-  font-size: 1.2em;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-/* Paragraphs */
-.post-body p {
-  margin: 0.8em 0;
-}
-
-/* Blockquotes */
-.post-body blockquote {
-  font-style: italic;
-  color: #4a3b35; /* dark brownish neutral, easier to read */
-  background: #fdf2f2; /* very soft pink background */
-  border-left: 4px solid #cc3333;
-  margin: 1em 0;
-  padding: 0.6em 1em;
-  border-radius: 6px;
-  font-size: 0.97em;
-}
-
-/* Bold & Emphasis */
-.post-body strong {
-  color: #5c2a19; /* warm brown for emphasis */
-}
-.post-body em {
-  color: #5c2a19; /* same warm brown */
-}
-
-/* Lists with subtle custom bullet */
-.post-body ul, .post-body ol {
-  list-style: none;
-  margin: 1em 0;
-  padding-left: 0;
-}
-.post-body li {
-  position: relative;
-  padding-left: 1.2em;
-  margin-bottom: 0.4em;
-}
-.post-body li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #a61919; /* warm red accent */
-  font-size: 0.9em;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
   line-height: 1.6;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Horizontal Rule */
-.post-body hr {
-  border: none;
-  border-top: 1px solid #eebbbb;
-  margin: 2em 0;
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #d6336c; /* Pink accent from Contempo Pink */
+  margin: 1.2rem 0 0.6rem;
+  line-height: 1.25;
 }
 
-/* Tables */
-.post-body table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5em 0;
-  font-size: 0.95em;
-}
-.post-body table th,
-.post-body table td {
-  border: 1px solid #f0cccc;
-  padding: 0.6em 0.8em;
-  text-align: left;
-}
-.post-body table th {
-  background: #f9e2e2;
-  color: #4a3b35; /* dark brownish neutral */
-}
-.post-body table tr:nth-child(even) {
-  background: #fff7f7;
+p {
+  margin-bottom: 1rem;
 }
 
-/* Images & media */
-.post-body img, 
-.post-body video, 
-.post-body iframe {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin: 1em 0;
-  display: block;
+a {
+  color: #d6336c;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-/* Captions */
-.post-body figcaption, .post-body .caption {
-  font-size: 0.9em;
-  color: #6b4b3a; /* softer brown */
-  text-align: center;
-  margin-top: 0.4em;
-}
-
-/* Code */
-.post-body code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.95em;
-  background: #f8ecec;
-  color: #5c2a19; /* warm brown */
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-}
-.post-body pre {
-  font-family: 'Courier New', Courier, monospace;
-  background: #f8ecec;
-  color: #5c2a19;
-  padding: 1em;
-  overflow-x: auto;
-  border-radius: 6px;
-  margin: 1em 0;
-  font-size: 0.95em;
-}
-
-/* Links */
-.post-body a {
-  color: #a61919;
+a:hover {
+  color: #a81e4f;
   text-decoration: underline;
 }
-.post-body a:hover {
-  color: #5c2a19;
+
+small {
+  font-size: 0.85rem;
 }
 
-/* Nested blockquotes */
-.post-body blockquote blockquote {
-  background: #fbecec;
-  border-left-color: #a61919;
+strong, b {
+  font-weight: bold;
 }
 
-/* Remove underline from linked headings */
-.post-body h2 a, .post-body h3 a, .post-body h4 a {
-  text-decoration: none;
-  color: inherit;
-}
-.post-body h2 a:hover, .post-body h3 a:hover, .post-body h4 a:hover {
-  color: #5c2a19;
+em, i {
+  font-style: italic;
 }
 
-/* Additional tags */
-.post-body dl, .post-body dd, .post-body dt {
-  margin: 0.5em 0;
+/* LISTS */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
 }
-.post-body mark {
-  background: #f9e2e2;
-  color: #5c2a19;
+
+li {
+  margin-bottom: 0.4rem;
 }
-.post-body sub, .post-body sup {
-  font-size: 0.8em;
+
+/* BLOCKQUOTE */
+blockquote {
+  border-left: 4px solid #d6336c;
+  padding-left: 1rem;
+  color: #555;
+  margin: 1rem 0;
+  font-style: italic;
+  background: #f9f9f9;
 }
-.post-body figure {
-  margin: 1.5em auto;
-  text-align: center;
+
+/* CODE & PRE */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
-.post-body audio, .post-body video {
+
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
-  margin: 1em auto;
+  margin: 1rem 0;
+  border-radius: 6px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .post-body {
-    font-size: 1em;
-    padding: 0 0.8rem;
-  }
-  .post-body h2 { font-size: 1.6em; }
-  .post-body h3 { font-size: 1.3em; }
+/* FORMS */
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
 }
-@media (max-width: 480px) {
-  .post-body {
-    font-size: 0.98em;
+
+button {
+  background-color: #d6336c;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #a81e4f;
+}
+
+/* HR */
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 0.8rem;
   }
-  .post-body h2 { font-size: 1.4em; }
-  .post-body h3 { font-size: 1.2em; }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
 }
