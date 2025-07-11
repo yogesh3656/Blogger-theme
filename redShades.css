@@ -24,7 +24,10 @@ h3 {
 
 
 /* Blockquotes */
-.post-body blockquote {
+.post-body blockquote,
+.post-body blockquote p,
+.post-body blockquote em,
+.post-body blockquote * {
   font-family: 'Georgia', serif;
   font-style: italic;
   color: #4d0000; /* dark reddish-brown */
