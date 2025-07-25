@@ -176,11 +176,11 @@
 
 /* ✅ Keep table natural width: if content is wide, table is wide */
 .post-body table {
-  width: auto;                /* natural width based on content */
-  min-width: 100%;            /* always at least container width */
+  /* width: auto;                /* natural width based on content */
+ /* min-width: 100%;            /* always at least container width */
   border-collapse: collapse;
   background-color: rgba(255, 182, 193, 0.08); /* very light pink transparent */
-  table-layout: auto;         /* let columns size naturally */
+  /* table-layout: auto;         /* let columns size naturally */
 }
 
 /* ✅ Keep words/numbers in one line (don't break words) */
