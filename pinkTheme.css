@@ -1,4 +1,4 @@
-/** Base typography **/
+/** Base typography inside post **/
 .post-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #2b2b2b;
@@ -17,7 +17,6 @@
   padding-bottom: 0.3em;
   transition: font-size 0.3s ease;
 }
-
 .post-body h3 {
   font-family: 'Georgia', serif;
   color: #cc3333;
@@ -27,7 +26,6 @@
   padding-left: 0.5em;
   transition: font-size 0.3s ease, border-left 0.3s ease;
 }
-
 .post-body h4, .post-body h5, .post-body h6 {
   font-family: 'Georgia', serif;
   color: #663300;
@@ -88,15 +86,17 @@
   padding: 0;
   list-style-position: outside;
 }
-.post-body ul li, .post-body ol li { margin-bottom: 0.4em; }
 .post-body ul { list-style-type: disc; }
 .post-body ol { list-style-type: decimal; }
+.post-body ul li, .post-body ol li {
+  margin-bottom: 0.4em;
+}
 .post-body ul li::marker,
 .post-body ol li::marker {
   color: #994d00;
 }
 
-/* Code */
+/* Code blocks & inline code */
 .post-body pre,
 .post-body code {
   font-family: 'Courier New', Courier, monospace;
@@ -117,37 +117,42 @@
   margin: 1.5em 0;
 }
 
-/* Responsive tables */
+/* Table responsiveness: use JS to wrap .post-body table into .table-responsive */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
+/* Natural table width; scroll if too wide */
 .table-responsive table {
+  width: auto;                   /* as wide as needed */
   border-collapse: collapse;
   background-color: rgba(255, 182, 193, 0.08);
-  width: auto; /* natural width based on content */
+  table-layout: auto;
 }
 
-.table-responsive th,
-.table-responsive td {
+/* Cells */
+.table-responsive td,
+.table-responsive th {
   white-space: nowrap;
   padding: 0.5em;
   text-align: left;
   border: 1px solid rgba(244, 194, 194, 0.7);
 }
 
+/* Header styling */
 .table-responsive th {
   background: rgba(255, 182, 193, 0.15);
   font-weight: bold;
 }
 
+/* Row hover */
 .table-responsive tr:hover {
   background: rgba(255, 182, 193, 0.2);
 }
 
-/* Optional: pretty scrollbar */
+/* Optional prettier scrollbar */
 .table-responsive::-webkit-scrollbar {
   height: 6px;
 }
@@ -167,7 +172,7 @@
   margin-top: 0.3em;
 }
 
-/* Text tags */
+/* Text tags for clarity */
 .post-body abbr {
   text-decoration: underline dotted;
   cursor: help;
@@ -201,7 +206,9 @@
 .post-body sub { top: 0.2em; }
 
 /* Highlights & edits */
-.post-body mark { background-color: #fff0b3; }
+.post-body mark {
+  background-color: #fff0b3;
+}
 .post-body del { color: #999; }
 .post-body ins {
   text-decoration: none;
