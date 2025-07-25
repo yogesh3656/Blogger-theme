@@ -1,4 +1,4 @@
-/** Base typography inside post **/
+/** Base typography **/
 .post-body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #2b2b2b;
@@ -36,7 +36,7 @@
   transition: font-size 0.3s ease;
 }
 
-/* Responsive heading scaling and remove vertical line on small screens */
+/* Responsive heading scaling */
 @media (max-width: 600px) {
   .post-body h2 {
     font-size: 1.5em;
@@ -71,12 +71,8 @@
 }
 
 /* Emphasis */
-.post-body strong {
-  color: #800000;
-}
-.post-body em {
-  color: #5c0000;
-}
+.post-body strong { color: #800000; }
+.post-body em { color: #5c0000; }
 
 /* Links */
 .post-body a {
@@ -84,9 +80,7 @@
   text-decoration: underline;
   transition: color 0.3s ease;
 }
-.post-body a:hover {
-  color: #663300;
-}
+.post-body a:hover { color: #663300; }
 
 /* Lists */
 .post-body ul, .post-body ol {
@@ -94,9 +88,7 @@
   padding: 0;
   list-style-position: outside;
 }
-.post-body ul li, .post-body ol li {
-  margin-bottom: 0.4em;
-}
+.post-body ul li, .post-body ol li { margin-bottom: 0.4em; }
 .post-body ul { list-style-type: disc; }
 .post-body ol { list-style-type: decimal; }
 .post-body ul li::marker,
@@ -104,7 +96,7 @@
   color: #994d00;
 }
 
-/* Code blocks & inline code */
+/* Code */
 .post-body pre,
 .post-body code {
   font-family: 'Courier New', Courier, monospace;
@@ -125,96 +117,44 @@
   margin: 1.5em 0;
 }
 
-
-
-
-
-/* wrap with .table-responsive (use JS or manual) */
+/* Responsive tables */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-/* natural table width */
 .table-responsive table {
-  width: auto;
-  min-width: 100%;
   border-collapse: collapse;
   background-color: rgba(255, 182, 193, 0.08);
+  width: auto; /* natural width based on content */
 }
 
-/* keep words whole; never break */
-.table-responsive td,
-.table-responsive th {
-  white-space: nowrap;      /* keep words/numbers whole */
+.table-responsive th,
+.table-responsive td {
+  white-space: nowrap;
   padding: 0.5em;
   text-align: left;
   border: 1px solid rgba(244, 194, 194, 0.7);
 }
 
-/* header style */
 .table-responsive th {
   background: rgba(255, 182, 193, 0.15);
   font-weight: bold;
 }
 
-/* row hover */
 .table-responsive tr:hover {
   background: rgba(255, 182, 193, 0.2);
 }
 
-
-
-
-
-/**********************************************************************
-/* ✅ Make tables scroll horizontally if too wide */
-.post-body {
-  /*overflow-x: auto;*/
-}
-
-/* ✅ Keep table natural width: if content is wide, table is wide */
-.post-body table {
-  /* width: auto;                /* natural width based on content */
- /* min-width: 100%;            /* always at least container width */
-  border-collapse: collapse;
-  background-color: rgba(255, 182, 193, 0.08); /* very light pink transparent */
-  /* table-layout: auto;         /* let columns size naturally */
-}
-
-/* ✅ Keep words/numbers in one line (don't break words) */
-.post-body table td,
-.post-body table th {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 1px solid rgba(244, 194, 194, 0.7);
-  padding: 0.5em;
-  text-align: left;
-}
-
-/* ✅ Table header styling */
-.post-body table th {
-  background: rgba(255, 182, 193, 0.15);
-  font-weight: bold;
-}
-
-/* ✅ Hover row effect */
-.post-body table tr:hover {
-  background: rgba(255, 182, 193, 0.2);
-}
-
-/* ✅ Optional: prettier scrollbar (WebKit browsers) */
-.post-body::-webkit-scrollbar {
+/* Optional: pretty scrollbar */
+.table-responsive::-webkit-scrollbar {
   height: 6px;
 }
-.post-body::-webkit-scrollbar-thumb {
+.table-responsive::-webkit-scrollbar-thumb {
   background: rgba(255, 182, 193, 0.5);
   border-radius: 3px;
 }
-***********************************************************/
-
 
 /* Images with captions */
 .post-body figure {
@@ -227,7 +167,7 @@
   margin-top: 0.3em;
 }
 
-/* Text tags for clarity & warmth */
+/* Text tags */
 .post-body abbr {
   text-decoration: underline dotted;
   cursor: help;
@@ -261,9 +201,7 @@
 .post-body sub { top: 0.2em; }
 
 /* Highlights & edits */
-.post-body mark {
-  background-color: #fff0b3;
-}
+.post-body mark { background-color: #fff0b3; }
 .post-body del { color: #999; }
 .post-body ins {
   text-decoration: none;
