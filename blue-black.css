@@ -5,8 +5,8 @@
   line-height: 1.7;
   font-size: 1em;
   background-color: #0d1b2a; /* dark-blue background */
-  padding: 1.5em;
-  border-radius: 12px;
+  padding: 0;
+  border-radius: 0;
 }
 
 /* Headings */
