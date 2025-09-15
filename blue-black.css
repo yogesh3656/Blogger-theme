@@ -1,0 +1,216 @@
+/** Base typography inside post **/
+.post-body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #dce7f5; /* light text */
+  line-height: 1.7;
+  font-size: 1em;
+  background-color: #0d1b2a; /* dark-blue background */
+  padding: 1.5em;
+  border-radius: 12px;
+}
+
+/* Headings */
+.post-body h2 {
+  font-family: 'Georgia', serif;
+  color: #66ccff; /* bright cyan */
+  text-align: center;
+  font-size: 1.8em;
+  margin: 1.5em 0 0.8em;
+  border-bottom: 2px solid #27496d;
+  padding-bottom: 0.3em;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+.post-body h2:hover { color: #99e6ff; }
+
+.post-body h3 {
+  font-family: 'Georgia', serif;
+  color: #4db8ff;
+  font-size: 1.4em;
+  margin: 1.2em 0 0.5em;
+  border-left: 4px solid #27496d;
+  padding-left: 0.5em;
+  transition: font-size 0.3s ease, border-left 0.3s ease, color 0.3s ease;
+}
+.post-body h3:hover { color: #80d4ff; }
+
+.post-body h4, .post-body h5, .post-body h6 {
+  font-family: 'Georgia', serif;
+  color: #99b3cc;
+  font-size: 1.2em;
+  margin: 1em 0 0.5em;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+.post-body h4:hover, .post-body h5:hover, .post-body h6:hover {
+  color: #b3d1ff;
+}
+
+/* Responsive heading scaling */
+@media (max-width: 600px) {
+  .post-body h2 { font-size: 1.5em; }
+  .post-body h3 {
+    font-size: 1.2em;
+    border-left: none;
+    padding-left: 0;
+  }
+  .post-body h4, .post-body h5, .post-body h6 { font-size: 1em; }
+}
+
+/* Paragraphs */
+.post-body p { margin: 0.5em 0; }
+
+/* Blockquotes */
+.post-body blockquote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #cce6ff;
+  background-color: #112e42;
+  border-left: 4px solid #3399ff;
+  margin: 1em 1em;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Emphasis */
+.post-body strong { color: #66ccff; }
+.post-body em { color: #99e6ff; }
+
+/* Links */
+.post-body a {
+  color: #66b2ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.post-body a:hover { color: #3399ff; }
+
+/* Lists */
+.post-body ul, .post-body ol {
+  margin: 0.5em 0 0.5em 2em;
+  padding: 0;
+  list-style-position: outside;
+}
+.post-body ul li, .post-body ol li { margin-bottom: 0.4em; }
+.post-body ul { list-style-type: disc; }
+.post-body ol { list-style-type: decimal; }
+.post-body ul li::marker,
+.post-body ol li::marker {
+  color: #66b2ff;
+}
+
+/* Code blocks and inline code */
+.post-body pre,
+.post-body code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1a2639;
+  color: #cce0ff;
+  font-size: 0.95em;
+  border-radius: 4px;
+}
+.post-body pre {
+  padding: 0.8em;
+  overflow-x: auto;
+}
+
+/* Horizontal rule */
+.post-body hr {
+  border: none;
+  border-top: 1px solid #27496d;
+  margin: 1.5em 0;
+}
+
+/**********************************************************************
+/* Table wrapper */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-responsive table {
+  display: table;
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  background-color: rgba(30, 60, 90, 0.5);
+}
+.table-responsive th,
+.table-responsive td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid rgba(102, 178, 255, 0.3);
+  padding: 0.5em;
+  text-align: left;
+  color: #dce7f5;
+}
+.table-responsive th {
+  background: rgba(102, 178, 255, 0.15);
+  font-weight: bold;
+}
+.table-responsive tr:hover {
+  background: rgba(102, 178, 255, 0.2);
+}
+.table-responsive::-webkit-scrollbar { height: 6px; }
+.table-responsive::-webkit-scrollbar-thumb {
+  background: rgba(102, 178, 255, 0.5);
+  border-radius: 3px;
+}
+
+/* Images with captions */
+.post-body figure {
+  margin: 1em auto;
+  text-align: center;
+}
+.post-body figcaption {
+  font-size: 0.9em;
+  color: #99b3cc;
+  margin-top: 0.3em;
+}
+
+/* Text tags */
+.post-body abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+  color: #80d4ff;
+}
+.post-body kbd {
+  background-color: #1a2639;
+  border: 1px solid #27496d;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-family: monospace;
+  font-size: 0.95em;
+  color: #cce0ff;
+}
+.post-body samp,
+.post-body var {
+  font-family: monospace;
+  color: #99ccff;
+}
+.post-body cite,
+.post-body dfn {
+  font-style: italic;
+  color: #80aaff;
+}
+.post-body sup,
+.post-body sub {
+  font-size: 0.8em;
+  line-height: 0;
+  position: relative;
+}
+.post-body sup { top: -0.5em; }
+.post-body sub { top: 0.2em; }
+
+/* Highlights and edits */
+.post-body mark {
+  background-color: #27496d;
+  color: #ffffff;
+}
+.post-body del { color: #808ca0; }
+.post-body ins {
+  text-decoration: none;
+  border-bottom: 2px solid #66ccff;
+  color: #cce6ff;
+}
