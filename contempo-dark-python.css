@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BLOGGER CONTEMPO DARK - MASTER POST STYLESHEET
-   Comprehensive styling for readability, heavy data, and diagrams
+   BLOGGER CONTEMPO DARK - EYE-CARE MASTER STYLESHEET
+   Optimized to reduce eye strain, prevent halation, and improve long-form reading
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -8,14 +8,14 @@
    -------------------------------------------------------------------------- */
 .post-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #e8eaed; /* Crisp light gray for optimal dark mode readability */
-  line-height: 1.7;
+  color: #cbd5e1; /* Soft slate gray instead of bright white to prevent halation */
+  line-height: 1.75; /* Slightly increased line height for breathing room */
   font-size: 1.05rem;
   word-wrap: break-word;
 }
 
 .post-body p {
-  margin: 0 0 1.2em 0;
+  margin: 0 0 1.3em 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -26,29 +26,29 @@
   line-height: 1.3;
   margin-top: 1.8em;
   margin-bottom: 0.8em;
-  color: #ffffff;
+  color: #f1f5f9; /* Off-white for headings to establish hierarchy without glare */
 }
 
 .post-body h2 {
   font-size: 1.8em;
   text-align: left;
-  border-bottom: 1px solid #333333; 
+  border-bottom: 1px solid #334155; 
   padding-bottom: 0.4em;
-  color: #ff5252; /* Vivid modern coral/crimson */
+  color: #38bdf8; /* Calming Sky Blue - easier on the eyes than red */
 }
 
 .post-body h3 {
   font-size: 1.4em;
-  border-left: 4px solid #ff5252;
+  border-left: 4px solid #38bdf8;
   padding-left: 12px;
-  background: linear-gradient(90deg, rgba(255,82,82,0.12) 0%, rgba(34,34,34,0) 100%);
+  background: linear-gradient(90deg, rgba(56,189,248,0.1) 0%, rgba(15,23,42,0) 100%);
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-.post-body h4 { font-size: 1.25em; color: #ff7979; }
-.post-body h5 { font-size: 1.1em; color: #babbbe; text-transform: uppercase; letter-spacing: 0.05em; }
-.post-body h6 { font-size: 1em; color: #80868b; font-style: italic; }
+.post-body h4 { font-size: 1.25em; color: #7dd3fc; }
+.post-body h5 { font-size: 1.1em; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+.post-body h6 { font-size: 1em; color: #64748b; font-style: italic; }
 
 @media (max-width: 600px) {
   .post-body h2 { font-size: 1.5em; }
@@ -60,15 +60,15 @@
    3. LINKS & LISTS
    -------------------------------------------------------------------------- */
 .post-body a {
-  color: #ff7979;
+  color: #38bdf8;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 121, 121, 0.4);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.4);
   transition: all 0.2s ease-in-out;
 }
 
 .post-body a:hover {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
+  color: #e0f2fe;
+  border-bottom-color: #e0f2fe;
 }
 
 .post-body ul, .post-body ol {
@@ -77,8 +77,8 @@
 }
 
 .post-body li { margin-bottom: 0.5em; }
-.post-body ul li::marker { color: #ff5252; font-size: 1.2em; }
-.post-body ol li::marker { color: #ff5252; font-weight: bold; }
+.post-body ul li::marker { color: #38bdf8; font-size: 1.2em; }
+.post-body ol li::marker { color: #7dd3fc; font-weight: bold; }
 
 /* --------------------------------------------------------------------------
    4. BLOCKQUOTES & HORIZONTAL RULES
@@ -86,13 +86,13 @@
 .post-body blockquote {
   font-family: "Georgia", serif;
   font-style: italic;
-  color: #cfd8dc;
-  background-color: #242424; /* Elevated dark gray */
-  border-left: 4px solid #ff5252;
+  color: #94a3b8; /* Muted text for quotes to reduce contrast fatigue */
+  background-color: #1e293b; /* Soft slate surface */
+  border-left: 4px solid #38bdf8;
   margin: 1.5em 0;
   padding: 1.2em 1.5em;
   border-radius: 0 8px 8px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .post-body blockquote p:last-child { margin-bottom: 0; }
@@ -100,33 +100,33 @@
 .post-body hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.1), rgba(255,255,255,0));
+  background-image: linear-gradient(to right, rgba(148,163,184,0), rgba(148,163,184,0.15), rgba(148,163,184,0));
   margin: 2.5em 0;
 }
 
 /* --------------------------------------------------------------------------
    5. INLINE TEXT ELEMENTS (Semantics & Formatting)
    -------------------------------------------------------------------------- */
-.post-body strong { color: #ffffff; font-weight: 700; }
-.post-body em { color: #ff7979; font-style: italic; }
-.post-body abbr { text-decoration: underline dotted #80868b; cursor: help; color: #ff7979;}
-.post-body cite, .post-body dfn { font-style: italic; color: #ffb8b8; }
-.post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #8ab4f8; }
+.post-body strong { color: #f8fafc; font-weight: 700; }
+.post-body em { color: #7dd3fc; font-style: italic; }
+.post-body abbr { text-decoration: underline dotted #64748b; cursor: help; color: #7dd3fc;}
+.post-body cite, .post-body dfn { font-style: italic; color: #bae6fd; }
+.post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #a7f3d0; /* Soft mint for vars */ }
 
 .post-body kbd {
-  background-color: #121212;
-  color: #ffffff;
-  border: 1px solid #444444;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #334155;
   border-radius: 4px;
   padding: 2px 6px;
   font-family: Consolas, Monaco, monospace;
   font-size: 0.85em;
-  box-shadow: 0 2px 0 #000000;
+  box-shadow: 0 2px 0 #020617;
 }
 
-.post-body mark { background-color: rgba(255, 82, 82, 0.25); color: #ffffff; padding: 0 4px; border-radius: 2px; }
-.post-body del { color: #80868b; text-decoration-color: #ff5252; }
-.post-body ins { text-decoration: none; border-bottom: 2px dashed #ff7979; color: #ffffff; }
+.post-body mark { background-color: rgba(56, 189, 248, 0.2); color: #f8fafc; padding: 0 4px; border-radius: 2px; }
+.post-body del { color: #64748b; text-decoration-color: #38bdf8; }
+.post-body ins { text-decoration: none; border-bottom: 2px dashed #7dd3fc; color: #f8fafc; }
 .post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
 .post-body sup { top: -0.5em; }
 .post-body sub { bottom: -0.25em; }
@@ -135,26 +135,26 @@
    6. PREFORMATTED TEXT & ASCII CODE BLOCKS (Mobile Optimized)
    -------------------------------------------------------------------------- */
 .post-body pre {
-  background-color: #0d0d0d; /* Deepest black for code blocks to recede */
-  color: #8ab4f8; 
+  background-color: #020617; /* Deepest blue-black for code block depth */
+  color: #93c5fd; 
   font-family: "Fira Code", Consolas, Monaco, monospace;
   font-size: 0.85rem;
-  line-height: 1.25; 
+  line-height: 1.35; 
   padding: 1.25em;
   border-radius: 8px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #1e293b;
   overflow-x: auto;
   white-space: pre; 
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
   margin: 1.5em 0;
   scrollbar-width: thin;
-  scrollbar-color: #ff5252 #1a1a1a;
+  scrollbar-color: #38bdf8 #0f172a;
   -webkit-overflow-scrolling: touch;
 }
 
 .post-body code {
-  background-color: #2a2a2a; /* Slightly lighter than background for pop */
-  color: #ff7979;
+  background-color: #1e293b; 
+  color: #7dd3fc;
   font-family: Consolas, Monaco, monospace;
   font-size: 0.9em;
   padding: 2px 6px;
@@ -164,9 +164,9 @@
 
 /* Pre block scrollbars */
 .post-body pre::-webkit-scrollbar { height: 6px; }
-.post-body pre::-webkit-scrollbar-track { background: #0d0d0d; border-radius: 0 0 8px 8px; }
-.post-body pre::-webkit-scrollbar-thumb { background: #444444; border-radius: 4px; }
-.post-body pre::-webkit-scrollbar-thumb:hover { background: #ff5252; }
+.post-body pre::-webkit-scrollbar-track { background: #0f172a; border-radius: 0 0 8px 8px; }
+.post-body pre::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+.post-body pre::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
 /* Shrink ASCII on mobile to prevent layout breaking */
 @media screen and (max-width: 600px) {
@@ -180,8 +180,9 @@
    7. IMAGES & FIGURES
    -------------------------------------------------------------------------- */
 .post-body figure { margin: 1.5em 0; text-align: center; }
-.post-body img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); }
-.post-body figcaption { font-size: 0.85em; color: #80868b; margin-top: 0.5em; font-style: italic; }
+.post-body img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.3); opacity: 0.95; /* Slight opacity drop to reduce glare from bright images */ }
+.post-body img:hover { opacity: 1; transition: opacity 0.3s ease; }
+.post-body figcaption { font-size: 0.85em; color: #64748b; margin-top: 0.5em; font-style: italic; }
 
 /* --------------------------------------------------------------------------
    8. MASTER TABLES
@@ -191,34 +192,34 @@
   overflow-x: auto;
   margin: 2em 0;
   border-radius: 8px;
-  border: 1px solid #333333;
-  background-color: #1a1a1a;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #555555 #141414;
+  scrollbar-color: #475569 #0f172a;
 }
 
 /* Custom Table Scrollbars */
 .table-responsive::-webkit-scrollbar { height: 8px; width: 8px; }
-.table-responsive::-webkit-scrollbar-track { background: #141414; border-radius: 0 0 8px 8px; }
-.table-responsive::-webkit-scrollbar-thumb { background: #444444; border-radius: 10px; }
-.table-responsive::-webkit-scrollbar-thumb:hover { background: #ff5252; }
+.table-responsive::-webkit-scrollbar-track { background: #0f172a; border-radius: 0 0 8px 8px; }
+.table-responsive::-webkit-scrollbar-thumb { background: #475569; border-radius: 10px; }
+.table-responsive::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
 
 .table-responsive table {
   width: 100%;
-  min-width: 800px; /* Forces scroll on small screens */
+  min-width: 800px; 
   border-collapse: collapse;
   font-family: -apple-system, sans-serif;
   font-size: 0.95rem;
-  color: #e8eaed;
+  color: #cbd5e1;
   margin: 0;
 }
 
 .table-responsive th, .table-responsive td {
   padding: 14px 16px;
-  border-bottom: 1px solid #2d2d2d;
-  border-right: 1px solid #2d2d2d;
+  border-bottom: 1px solid #1e293b;
+  border-right: 1px solid #1e293b;
   text-align: left;
   vertical-align: top; 
   line-height: 1.5;
@@ -226,20 +227,20 @@
 
 /* Header styling */
 .table-responsive th {
-  background-color: #121212; /* Darkest layer for headers */
-  color: #ffffff;
+  background-color: #020617; 
+  color: #f1f5f9;
   font-weight: 600;
   white-space: nowrap; 
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.85em;
-  border-bottom: 2px solid #ff5252;
+  border-bottom: 2px solid #38bdf8;
 }
 
 /* Row states */
-.table-responsive td { background-color: #1e1e1e; white-space: normal; }
-.table-responsive tr:nth-child(even) td { background-color: #1a1a1a; }
-.table-responsive tbody tr:hover td { background-color: #2a2a2a; color: #ffffff; transition: 0.2s ease; }
+.table-responsive td { background-color: #0f172a; white-space: normal; }
+.table-responsive tr:nth-child(even) td { background-color: #162032; }
+.table-responsive tbody tr:hover td { background-color: #1e293b; color: #f8fafc; transition: 0.2s ease; }
 
 /* Border cleanups */
 .table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
@@ -257,13 +258,13 @@
   display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 2rem 0; font-family: -apple-system, sans-serif;
 }
 .flow-card {
-  background-color: #1e1e1e; border: 1px solid #333333; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,0.3); width: 100%; max-width: 280px;
+  background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,0.2); width: 100%; max-width: 280px;
 }
-.flow-card.primary { border-color: #ff5252; background-color: #2a1b1b; } /* Deep red-tinted background */
-.flow-card h4 { margin: 0 0 4px 0; font-size: 0.95rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; }
-.flow-card p { margin: 0; font-size: 0.8rem; color: #9aa0a6; line-height: 1.3; }
-.flow-connector { display: flex; flex-direction: column; align-items: center; color: #ff7979; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
-.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #ff5252; }
+.flow-card.primary { border-color: #38bdf8; background-color: #12223a; } 
+.flow-card h4 { margin: 0 0 4px 0; font-size: 0.95rem; color: #f1f5f9; text-transform: uppercase; letter-spacing: 0.05em; }
+.flow-card p { margin: 0; font-size: 0.8rem; color: #94a3b8; line-height: 1.3; }
+.flow-connector { display: flex; flex-direction: column; align-items: center; color: #7dd3fc; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
+.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #38bdf8; }
 .flow-row { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
 
 /* Flowchart Desktop Layout */
