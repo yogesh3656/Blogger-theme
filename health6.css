@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BLOGGER CONTEMPO DARK - COMPLETE MASTER STYLESHEET
-   Supports all post typography, responsive tables, and mobile ASCII diagrams
+   BLOGGER CONTEMPO DARK - MASTER POST STYLESHEET
+   Comprehensive styling for readability, heavy data, and strict ASCII diagrams
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -8,7 +8,7 @@
    -------------------------------------------------------------------------- */
 .post-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #e8eaed; /* Soft off-white to eliminate eye strain */
+  color: #e8eaed; /* Soft light gray for dark backgrounds */
   line-height: 1.7;
   font-size: 1.05rem;
   word-wrap: break-word;
@@ -34,7 +34,7 @@
   text-align: left;
   border-bottom: 1px solid #444444; 
   padding-bottom: 0.4em;
-  color: #ff6b6b; /* Contempo Dark signature accent color */
+  color: #ff6b6b; /* Premium coral/crimson accent */
 }
 
 .post-body h3 {
@@ -109,7 +109,7 @@
    -------------------------------------------------------------------------- */
 .post-body strong { color: #ffffff; font-weight: 700; }
 .post-body em { color: #ff8787; font-style: italic; }
-.post-body abbr { text-decoration: underline dotted #9aa0a6; cursor: help; color: #ff8787; }
+.post-body abbr { text-decoration: underline dotted #9aa0a6; cursor: help; color: #ff8787;}
 .post-body cite, .post-body dfn { font-style: italic; color: #ffb8b8; }
 .post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #a8c7fa; }
 
@@ -132,29 +132,32 @@
 .post-body sub { bottom: -0.25em; }
 
 /* --------------------------------------------------------------------------
-   6. PREFORMATTED TEXT & STRICT ASCII DIAGRAMS (Mobile Fix Integrated)
+   6. PREFORMATTED TEXT & STRICT ASCII DIAGRAMS (MOBILE SPACE FIX)
    -------------------------------------------------------------------------- */
 .post-body pre {
-  display: block !important;
+  display: block;
   background-color: #141414;
   color: #a8c7fa; 
   
-  /* System Font Stack: Prevents mobile font substitution and box distortion */
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace !important;
-  
-  font-size: 12px !important; 
+  /* STRICT Monospace: 'Courier New' handles spaces the most consistently on mobile */
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 13px !important; 
   line-height: 1.2 !important;
   
-  /* Prevents mobile web browsers from altering font scaling dynamically */
+  /* CRITICAL FIX 1: Stops mobile browsers from inflating text size unevenly */
   -webkit-text-size-adjust: 100% !important;
   text-size-adjust: 100% !important;
 
-  /* Strict space preservation & wrapping prevention */
+  /* CRITICAL FIX 2: Forces spaces to remain exactly as typed without stretching */
   white-space: pre !important; 
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  tab-size: 4 !important;
+
+  /* Prevents text wrapping */
   word-wrap: normal !important;
-  word-break: normal !important;
+  word-break: keep-all !important;
   overflow-wrap: normal !important;
-  font-variant-ligatures: none !important;
   
   /* Enables horizontal scrolling */
   overflow-x: auto !important; 
@@ -164,31 +167,23 @@
   border: 1px solid #333333;
   margin: 1.5em 0;
   box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+  
+  /* Smooth horizontal swipe on iOS/Android */
   -webkit-overflow-scrolling: touch;
   
-  /* Custom Scrollbars */
+  /* Styled Scrollbars */
   scrollbar-width: thin;
   scrollbar-color: #ff6b6b #1a1a1a;
 }
 
-/* Forces inner element to act as an unbroken grid on small viewports */
+/* Ensures any <code> tag inside <pre> inherits the strict rules */
 .post-body pre code {
-  display: inline-block !important; 
-  min-width: 100% !important;
   font-family: inherit !important;
   white-space: inherit !important;
+  font-size: inherit !important;
   background: none; 
   color: inherit; 
   padding: 0;
-}
-
-.post-body code {
-  background-color: #2a2a2a;
-  color: #ff8787;
-  font-family: Consolas, Monaco, monospace;
-  font-size: 0.9em;
-  padding: 2px 6px;
-  border-radius: 4px;
 }
 
 .post-body pre::-webkit-scrollbar { height: 8px; }
@@ -215,10 +210,9 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #ff6b6b #141414;
+  scrollbar-color: #555555 #141414;
 }
 
-/* Custom Table Scrollbars */
 .table-responsive::-webkit-scrollbar { height: 8px; width: 8px; }
 .table-responsive::-webkit-scrollbar-track { background: #141414; border-radius: 0 0 8px 8px; }
 .table-responsive::-webkit-scrollbar-thumb { background: #444444; border-radius: 10px; }
@@ -226,7 +220,7 @@
 
 .table-responsive table {
   width: 100%;
-  min-width: 800px; /* Triggers horizontal scroll on mobile screens */
+  min-width: 800px; /* Forces scroll on small screens */
   border-collapse: collapse;
   font-family: -apple-system, sans-serif;
   font-size: 0.95rem;
@@ -243,7 +237,6 @@
   line-height: 1.5;
 }
 
-/* Header styling */
 .table-responsive th {
   background-color: #111111;
   color: #ffffff;
@@ -255,12 +248,10 @@
   border-bottom: 2px solid #ff6b6b;
 }
 
-/* Row states */
 .table-responsive td { background-color: #1e1e1e; white-space: normal; }
 .table-responsive tr:nth-child(even) td { background-color: #242424; }
 .table-responsive tbody tr:hover td { background-color: #2d2d2d; color: #ffffff; transition: 0.2s ease; }
 
-/* Border cleanups */
 .table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
 .table-responsive tr:last-child td { border-bottom: none; }
 
@@ -270,7 +261,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. RESPONSIVE HTML FLOWCHART COMPONENT
+   9. RESPONSIVE HTML FLOWCHART (Optional Alternative)
    -------------------------------------------------------------------------- */
 .flowchart-container { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 2rem 0; font-family: -apple-system, sans-serif; }
 .flow-card { background-color: #1e1e1e; border: 1px solid #333333; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); width: 100%; max-width: 280px; }
@@ -286,5 +277,3 @@
   .flow-row .flow-card { max-width: 260px; }
   .flow-row .flow-connector { flex-direction: row; }
 }
-
-
