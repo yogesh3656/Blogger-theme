@@ -1,0 +1,279 @@
+/* ==========================================================================
+   BLOGGER SOHO LIGHT - MASTER POST STYLESHEET
+   A bright, airy, and minimalist editorial style for long-form content
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BASE TYPOGRAPHY & LAYOUT
+   -------------------------------------------------------------------------- */
+.post-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333333; /* Deep charcoal rather than pure black for reading comfort */
+  line-height: 1.8; /* Generous editorial whitespace */
+  font-size: 1.05rem;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+.post-body p {
+  margin: 0 0 1.5em 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. HEADINGS (Hierarchical & Responsive)
+   -------------------------------------------------------------------------- */
+.post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #000000;
+}
+
+/* Primary Headings: Stark, thin, uppercase */
+.post-body h2 {
+  font-size: 1.6em;
+  font-weight: 300;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #ebebeb; 
+  padding-bottom: 0.5em;
+}
+
+/* Secondary Headings: Editorial serif to create contrast */
+.post-body h3 {
+  font-family: "Georgia", serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-style: italic;
+  color: #b59551; /* Muted antique gold/brass accent */
+  margin-bottom: 0.5em;
+}
+
+.post-body h4 { font-size: 1.2em; font-weight: 500; color: #111111; letter-spacing: 0.05em; }
+.post-body h5 { font-size: 1em; color: #777777; text-transform: uppercase; letter-spacing: 0.15em; }
+.post-body h6 { font-size: 0.9em; color: #999999; font-style: italic; }
+
+@media (max-width: 600px) {
+  .post-body h2 { font-size: 1.4em; }
+  .post-body h3 { font-size: 1.3em; }
+  .post-body h4, .post-body h5, .post-body h6 { font-size: 1rem; }
+}
+
+/* --------------------------------------------------------------------------
+   3. LINKS & LISTS
+   -------------------------------------------------------------------------- */
+.post-body a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #cccccc;
+  transition: all 0.3s ease;
+}
+
+.post-body a:hover {
+  color: #b59551;
+  border-bottom-color: #b59551;
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0;
+}
+
+.post-body li { margin-bottom: 0.6em; }
+.post-body ul li::marker { color: #b59551; }
+.post-body ol li::marker { color: #555555; font-family: "Georgia", serif; font-style: italic; }
+
+/* --------------------------------------------------------------------------
+   4. BLOCKQUOTES & HORIZONTAL RULES
+   -------------------------------------------------------------------------- */
+/* Soho blockquotes are stark, without heavy background boxes */
+.post-body blockquote {
+  font-family: "Georgia", serif;
+  font-size: 1.25em;
+  font-style: italic;
+  font-weight: 300;
+  color: #555555;
+  background-color: #fafafa;
+  border-left: 2px solid #b59551;
+  margin: 2em 0;
+  padding: 1em 1.5em;
+  line-height: 1.6;
+}
+
+.post-body blockquote p:last-child { margin-bottom: 0; }
+
+.post-body hr {
+  border: 0;
+  height: 1px;
+  background-color: #ebebeb;
+  margin: 3em 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. INLINE TEXT ELEMENTS (Semantics & Formatting)
+   -------------------------------------------------------------------------- */
+.post-body strong { color: #000000; font-weight: 600; }
+.post-body em { font-family: "Georgia", serif; font-style: italic; color: #b59551; }
+.post-body abbr { text-decoration: underline dotted #999999; cursor: help; color: #000000;}
+.post-body cite, .post-body dfn { font-family: "Georgia", serif; font-style: italic; color: #666666; }
+.post-body samp, .post-body var { font-family: "Courier New", Courier, monospace; color: #777777; }
+
+.post-body kbd {
+  background-color: #f5f5f5;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 2px 6px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85em;
+}
+
+.post-body mark { background-color: #fcf4e3; color: #000000; padding: 0 4px; }
+.post-body del { color: #999999; text-decoration-color: #b59551; }
+.post-body ins { text-decoration: none; border-bottom: 1px solid #b59551; color: #000000; }
+.post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
+.post-body sup { top: -0.5em; }
+.post-body sub { bottom: -0.25em; }
+
+/* --------------------------------------------------------------------------
+   6. PREFORMATTED TEXT & ASCII CODE BLOCKS
+   -------------------------------------------------------------------------- */
+.post-body pre {
+  background-color: #f9f9f9; 
+  color: #555555; 
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.4; 
+  padding: 1.5em;
+  border: 1px solid #eeeeee;
+  overflow-x: auto;
+  white-space: pre; 
+  margin: 2em 0;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #f9f9f9;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-body code {
+  background-color: #f5f5f5; 
+  color: #b59551;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+}
+.post-body pre code { background: none; color: inherit; padding: 0; border: none; }
+
+/* Pre block scrollbars */
+.post-body pre::-webkit-scrollbar { height: 6px; }
+.post-body pre::-webkit-scrollbar-track { background: #f9f9f9; }
+.post-body pre::-webkit-scrollbar-thumb { background: #cccccc; }
+.post-body pre::-webkit-scrollbar-thumb:hover { background: #b59551; }
+
+@media screen and (max-width: 600px) {
+  .post-body pre { font-size: 10px; letter-spacing: -0.4px; padding: 1em; }
+}
+@media screen and (max-width: 400px) {
+  .post-body pre { font-size: 8.5px; letter-spacing: -0.5px; }
+}
+
+/* --------------------------------------------------------------------------
+   7. IMAGES & FIGURES
+   -------------------------------------------------------------------------- */
+.post-body figure { margin: 2em 0; text-align: center; }
+/* Flat, gallery-style imagery without heavy drop shadows */
+.post-body img { max-width: 100%; height: auto; border: 1px solid #ebebeb; }
+.post-body figcaption { font-size: 0.8em; color: #777777; margin-top: 1em; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* --------------------------------------------------------------------------
+   8. MASTER TABLES (Minimalist Editorial Grid)
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2.5em 0;
+  border: 1px solid #ebebeb; 
+  background-color: #ffffff; 
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #ffffff;
+}
+
+.table-responsive::-webkit-scrollbar { height: 6px; width: 6px; }
+.table-responsive::-webkit-scrollbar-track { background: #ffffff; }
+.table-responsive::-webkit-scrollbar-thumb { background: #e0e0e0; }
+.table-responsive::-webkit-scrollbar-thumb:hover { background: #b59551; }
+
+.table-responsive table {
+  width: 100%;
+  min-width: 800px; 
+  border-collapse: collapse;
+  font-family: -apple-system, "Segoe UI", sans-serif; 
+  font-size: 0.95rem;
+  color: #333333;
+  margin: 0;
+}
+
+.table-responsive th, .table-responsive td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f2f2f2; 
+  border-right: 1px solid #f2f2f2;
+  text-align: left;
+  vertical-align: top; 
+  line-height: 1.6;
+}
+
+/* Header styling */
+.table-responsive th {
+  background-color: #fafafa; 
+  color: #000000;
+  font-weight: 500;
+  white-space: nowrap; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85em;
+  border-bottom: 2px solid #b59551; /* Elegant gold underline for headers */
+}
+
+/* Row states */
+.table-responsive td { background-color: #ffffff; }
+.table-responsive tr:nth-child(even) td { background-color: #fcfcfc; }
+.table-responsive tbody tr:hover td { 
+  background-color: #fafafa; 
+  color: #000000; 
+  transition: background-color 0.2s ease, color 0.2s ease; 
+}
+
+.table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
+.table-responsive tr:last-child td { border-bottom: none; }
+
+@media screen and (max-width: 768px) {
+  .table-responsive table { font-size: 0.9rem; }
+  .table-responsive th, .table-responsive td { padding: 12px 14px; }
+}
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVE HTML FLOWCHART (Stark / Line-art style)
+   -------------------------------------------------------------------------- */
+.flowchart-container {
+  display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 3rem 0; font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.flow-card {
+  background-color: #ffffff; border: 1px solid #ebebeb; padding: 16px 20px; text-align: center; width: 100%; max-width: 280px; transition: border-color 0.3s;
+}
+.flow-card.primary { border-color: #b59551; background-color: #fdfaf4; } /* Subtle warm gold tint */
+.flow-card h4 { margin: 0 0 6px 0; font-size: 0.85rem; color: #000000; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+.flow-card p { margin: 0; font-size: 0.8rem; color: #666666; line-height: 1.4; font-weight: 400; }
+.flow-connector { display: flex; flex-direction: column; align-items: center; color: #999999; font-size: 0.75rem; text-align: center; gap: 4px; text-transform: uppercase; letter-spacing: 0.1em;}
+.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #b59551; font-weight: 100;}
+.flow-row { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+
+/* Flowchart Desktop Layout */
+@media screen and (min-width: 650px) {
+  .flow-row { flex-direction: row; justify-content: center; gap: 32px; }
+  .flow-row .flow-card { max-width: 260px; }
+  .flow-row .flow-connector { flex-direction: row; }
+}
