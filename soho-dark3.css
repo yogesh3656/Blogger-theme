@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BLOGGER SOHO DARK - MASTER POST STYLESHEET (UPGRADED)
-   High-contrast editorial style with improved data table readability
+   BLOGGER SOHO DARK - MASTER POST STYLESHEET
+   A minimalist, editorial, and gallery-inspired style for long-form content
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -8,8 +8,8 @@
    -------------------------------------------------------------------------- */
 .post-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #cccccc; /* Brightened silver for much better reading contrast */
-  line-height: 1.8;
+  color: #b0b0b0; /* Muted, elegant silver-gray for boutique minimalism */
+  line-height: 1.8; /* Generous whitespace characteristic of the Soho theme */
   font-size: 1.05rem;
   word-wrap: break-word;
   font-weight: 300;
@@ -30,7 +30,7 @@
   color: #ffffff;
 }
 
-/* Primary Headings: Stark, thin, uppercase */
+/* Soho loves stark, thin, and uppercase primary headings */
 .post-body h2 {
   font-size: 1.6em;
   font-weight: 300;
@@ -39,15 +39,16 @@
   letter-spacing: 0.1em;
   border-bottom: 1px solid #333333; 
   padding-bottom: 0.5em;
+  color: #ffffff; 
 }
 
-/* Secondary Headings: Editorial serif with a striking Ruby Red accent */
+/* Editorial serif for secondary headings to create contrast */
 .post-body h3 {
   font-family: "Georgia", serif;
   font-size: 1.5em;
   font-weight: 400;
   font-style: italic;
-  color: #e53935; /* Crisp editorial Ruby Red */
+  color: #d4af37; /* Muted gallery gold/bronze accent */
   margin-bottom: 0.5em;
 }
 
@@ -72,8 +73,8 @@
 }
 
 .post-body a:hover {
-  color: #e53935;
-  border-bottom-color: #e53935;
+  color: #d4af37;
+  border-bottom-color: #d4af37;
 }
 
 .post-body ul, .post-body ol {
@@ -82,22 +83,22 @@
 }
 
 .post-body li { margin-bottom: 0.6em; }
-.post-body ul li::marker { color: #e53935; }
+.post-body ul li::marker { color: #555555; }
 .post-body ol li::marker { color: #888888; font-family: "Georgia", serif; font-style: italic; }
 
 /* --------------------------------------------------------------------------
    4. BLOCKQUOTES & HORIZONTAL RULES
    -------------------------------------------------------------------------- */
+/* Soho blockquotes are stark, without heavy background boxes */
 .post-body blockquote {
   font-family: "Georgia", serif;
   font-size: 1.25em;
   font-style: italic;
   font-weight: 300;
-  color: #ffffff;
-  background-color: #0d0d0d;
-  border-left: 2px solid #e53935;
+  color: #e0e0e0;
+  border-left: 1px solid #d4af37;
   margin: 2em 0;
-  padding: 1em 1.5em;
+  padding: 0.5em 0 0.5em 1.5em;
   line-height: 1.6;
 }
 
@@ -106,7 +107,7 @@
 .post-body hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.15), rgba(255,255,255,0));
+  background-color: #222222;
   margin: 3em 0;
 }
 
@@ -114,24 +115,24 @@
    5. INLINE TEXT ELEMENTS (Semantics & Formatting)
    -------------------------------------------------------------------------- */
 .post-body strong { color: #ffffff; font-weight: 600; }
-.post-body em { font-family: "Georgia", serif; font-style: italic; color: #e53935; }
+.post-body em { font-family: "Georgia", serif; font-style: italic; color: #d4af37; }
 .post-body abbr { text-decoration: underline dotted #555555; cursor: help; color: #ffffff;}
 .post-body cite, .post-body dfn { font-family: "Georgia", serif; font-style: italic; color: #bbbbbb; }
 .post-body samp, .post-body var { font-family: "Courier New", Courier, monospace; color: #a0a0a0; }
 
 .post-body kbd {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  border: 1px solid #444444;
+  background-color: #000000;
+  color: #cccccc;
+  border: 1px solid #333333;
   border-radius: 2px;
   padding: 2px 6px;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.85em;
 }
 
-.post-body mark { background-color: rgba(229, 57, 53, 0.2); color: #ffffff; padding: 0 4px; }
-.post-body del { color: #555555; text-decoration-color: #e53935; }
-.post-body ins { text-decoration: none; border-bottom: 1px solid #e53935; color: #ffffff; }
+.post-body mark { background-color: #333333; color: #d4af37; padding: 0 4px; }
+.post-body del { color: #555555; text-decoration-color: #888888; }
+.post-body ins { text-decoration: none; border-bottom: 1px solid #d4af37; color: #ffffff; }
 .post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
 .post-body sup { top: -0.5em; }
 .post-body sub { bottom: -0.25em; }
@@ -140,36 +141,36 @@
    6. PREFORMATTED TEXT & ASCII CODE BLOCKS
    -------------------------------------------------------------------------- */
 .post-body pre {
-  background-color: #050505; 
-  color: #b3b3b3; 
+  background-color: #080808; /* Near pure black for stark gallery contrast */
+  color: #999999; 
   font-family: "Courier New", Courier, monospace;
   font-size: 0.85rem;
   line-height: 1.4; 
   padding: 1.5em;
-  border: 1px solid #1f1f1f;
+  border: 1px solid #1a1a1a;
   overflow-x: auto;
   white-space: pre; 
   margin: 2em 0;
   scrollbar-width: thin;
-  scrollbar-color: #444444 #050505;
+  scrollbar-color: #333333 #080808;
   -webkit-overflow-scrolling: touch;
 }
 
 .post-body code {
-  background-color: #141414; 
-  color: #e53935;
+  background-color: #111111; 
+  color: #e0e0e0;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.9em;
   padding: 2px 6px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #222222;
 }
 .post-body pre code { background: none; color: inherit; padding: 0; border: none; }
 
 /* Pre block scrollbars */
-.post-body pre::-webkit-scrollbar { height: 6px; }
-.post-body pre::-webkit-scrollbar-track { background: #050505; }
+.post-body pre::-webkit-scrollbar { height: 4px; }
+.post-body pre::-webkit-scrollbar-track { background: #080808; }
 .post-body pre::-webkit-scrollbar-thumb { background: #333333; }
-.post-body pre::-webkit-scrollbar-thumb:hover { background: #e53935; }
+.post-body pre::-webkit-scrollbar-thumb:hover { background: #555555; }
 
 @media screen and (max-width: 600px) {
   .post-body pre { font-size: 10px; letter-spacing: -0.4px; padding: 1em; }
@@ -182,8 +183,9 @@
    7. IMAGES & FIGURES
    -------------------------------------------------------------------------- */
 .post-body figure { margin: 2em 0; text-align: center; }
-.post-body img { max-width: 100%; height: auto; border: 1px solid #222222; box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
-.post-body figcaption { font-size: 0.8em; color: #888888; margin-top: 1em; text-transform: uppercase; letter-spacing: 0.1em; }
+/* Soho removes heavy shadows in favor of stark, flat imagery */
+.post-body img { max-width: 100%; height: auto; border: 1px solid #222222; }
+.post-body figcaption { font-size: 0.8em; color: #666666; margin-top: 1em; text-transform: uppercase; letter-spacing: 0.1em; }
 
 /* --------------------------------------------------------------------------
    8. MASTER TABLES (Upgraded for Readability)
@@ -193,16 +195,16 @@
   overflow-x: auto;
   margin: 2.5em 0;
   border: 1px solid #333333; /* Stronger outer boundary */
-  background-color: #0a0a0a; /* Elevated background instead of transparent */
+  background-color: #0a0a0a; /* Elevated solid background instead of transparent */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #555555 #0a0a0a;
+  scrollbar-color: #444444 #0a0a0a;
 }
 
 .table-responsive::-webkit-scrollbar { height: 6px; width: 6px; }
 .table-responsive::-webkit-scrollbar-track { background: #0a0a0a; }
 .table-responsive::-webkit-scrollbar-thumb { background: #444444; }
-.table-responsive::-webkit-scrollbar-thumb:hover { background: #e53935; }
+.table-responsive::-webkit-scrollbar-thumb:hover { background: #d4af37; } /* Gold hover */
 
 .table-responsive table {
   width: 100%;
@@ -210,14 +212,14 @@
   border-collapse: collapse;
   font-family: -apple-system, "Segoe UI", sans-serif; /* Cleaner font for data */
   font-size: 0.95rem;
-  color: #cccccc;
+  color: #b0b0b0;
   margin: 0;
 }
 
 .table-responsive th, .table-responsive td {
   padding: 16px 20px;
-  border-bottom: 1px solid #262626; /* Softer, visible inner borders */
-  border-right: 1px solid #262626;
+  border-bottom: 1px solid #222222; /* Softer, visible inner borders */
+  border-right: 1px solid #222222;
   text-align: left;
   vertical-align: top; 
   line-height: 1.6;
@@ -225,14 +227,14 @@
 
 /* Header styling */
 .table-responsive th {
-  background-color: #141414; /* Darker header background to stand out */
+  background-color: #0d0d0d; /* Darker header background to stand out */
   color: #ffffff;
   font-weight: 500;
   white-space: nowrap; 
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.85em;
-  border-bottom: 2px solid #e53935; /* Striking Ruby underline for headers */
+  border-bottom: 2px solid #d4af37; /* Striking Gold underline for headers */
 }
 
 /* Row states */
@@ -253,21 +255,22 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. RESPONSIVE HTML FLOWCHART
+   9. RESPONSIVE HTML FLOWCHART (Stark / Line-art style)
    -------------------------------------------------------------------------- */
 .flowchart-container {
   display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 3rem 0; font-family: "Helvetica Neue", Arial, sans-serif;
 }
 .flow-card {
-  background-color: #0a0a0a; border: 1px solid #333333; padding: 16px 20px; text-align: center; width: 100%; max-width: 280px; transition: all 0.3s ease;
+  background-color: #0a0a0a; border: 1px solid #333333; padding: 16px 20px; text-align: center; width: 100%; max-width: 280px; transition: border-color 0.3s;
 }
-.flow-card.primary { border-color: #e53935; background-color: #140808; } /* Very subtle red tint */
-.flow-card h4 { margin: 0 0 6px 0; font-size: 0.85rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
-.flow-card p { margin: 0; font-size: 0.8rem; color: #999999; line-height: 1.4; font-weight: 300; }
-.flow-connector { display: flex; flex-direction: column; align-items: center; color: #666666; font-size: 0.75rem; text-align: center; gap: 4px; text-transform: uppercase; letter-spacing: 0.1em;}
-.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #e53935; font-weight: 100;}
+.flow-card.primary { border-color: #d4af37; background-color: #14120a; } /* Slight gold tint */
+.flow-card h4 { margin: 0 0 6px 0; font-size: 0.85rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 400; }
+.flow-card p { margin: 0; font-size: 0.8rem; color: #888888; line-height: 1.4; font-weight: 300; }
+.flow-connector { display: flex; flex-direction: column; align-items: center; color: #555555; font-size: 0.75rem; text-align: center; gap: 4px; text-transform: uppercase; letter-spacing: 0.1em;}
+.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #d4af37; font-weight: 100;}
 .flow-row { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; }
 
+/* Flowchart Desktop Layout */
 @media screen and (min-width: 650px) {
   .flow-row { flex-direction: row; justify-content: center; gap: 32px; }
   .flow-row .flow-card { max-width: 260px; }
