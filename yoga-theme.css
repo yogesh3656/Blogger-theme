@@ -1,0 +1,273 @@
+/* ==========================================================================
+   BLOGGER CONTEMPO FLAMINGO - MASTER POST STYLESHEET
+   Comprehensive styling for readability, heavy data, and diagrams
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BASE TYPOGRAPHY & LAYOUT
+   -------------------------------------------------------------------------- */
+.post-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333333; /* Deep charcoal for high contrast on light backgrounds */
+  line-height: 1.7;
+  font-size: 1.05rem;
+  word-wrap: break-word;
+}
+
+.post-body p {
+  margin: 0 0 1.2em 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. HEADINGS (Hierarchical & Responsive)
+   -------------------------------------------------------------------------- */
+.post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
+  font-family: "Georgia", serif;
+  line-height: 1.3;
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  color: #111111;
+}
+
+.post-body h2 {
+  font-size: 1.8em;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0; 
+  padding-bottom: 0.4em;
+  color: #d81b60; /* Deep Flamingo Pink */
+}
+
+.post-body h3 {
+  font-size: 1.4em;
+  border-left: 4px solid #f06292; /* Vibrant Flamingo accent */
+  padding-left: 12px;
+  background: linear-gradient(90deg, rgba(240,98,146,0.1) 0%, rgba(255,255,255,0) 100%);
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.post-body h4 { font-size: 1.25em; color: #e91e63; }
+.post-body h5 { font-size: 1.1em; color: #555555; text-transform: uppercase; letter-spacing: 0.05em; }
+.post-body h6 { font-size: 1em; color: #777777; font-style: italic; }
+
+@media (max-width: 600px) {
+  .post-body h2 { font-size: 1.5em; }
+  .post-body h3 { font-size: 1.25em; border-left: none; padding-left: 0; background: none; }
+  .post-body h4, .post-body h5, .post-body h6 { font-size: 1.1em; }
+}
+
+/* --------------------------------------------------------------------------
+   3. LINKS & LISTS
+   -------------------------------------------------------------------------- */
+.post-body a {
+  color: #e91e63;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(233, 30, 99, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.post-body a:hover {
+  color: #ad1457;
+  border-bottom-color: #ad1457;
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0;
+}
+
+.post-body li { margin-bottom: 0.5em; }
+.post-body ul li::marker { color: #f06292; font-size: 1.2em; }
+.post-body ol li::marker { color: #d81b60; font-weight: bold; }
+
+/* --------------------------------------------------------------------------
+   4. BLOCKQUOTES & HORIZONTAL RULES
+   -------------------------------------------------------------------------- */
+.post-body blockquote {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  color: #555555;
+  background-color: #fff9fa; /* Very subtle warm pink tint */
+  border-left: 4px solid #f06292;
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.post-body blockquote p:last-child { margin-bottom: 0; }
+
+.post-body hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(240,98,146,0), rgba(240,98,146,0.3), rgba(240,98,146,0));
+  margin: 2.5em 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. INLINE TEXT ELEMENTS (Semantics & Formatting)
+   -------------------------------------------------------------------------- */
+.post-body strong { color: #111111; font-weight: 700; }
+.post-body em { color: #d81b60; font-style: italic; }
+.post-body abbr { text-decoration: underline dotted #999999; cursor: help; color: #e91e63;}
+.post-body cite, .post-body dfn { font-style: italic; color: #c2185b; }
+.post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #1976d2; }
+
+.post-body kbd {
+  background-color: #f5f5f5;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.85em;
+  box-shadow: 0 2px 0 #bbbbbb;
+}
+
+.post-body mark { background-color: rgba(240, 98, 146, 0.25); color: #111111; padding: 0 4px; border-radius: 2px; }
+.post-body del { color: #888888; text-decoration-color: #e91e63; }
+.post-body ins { text-decoration: none; border-bottom: 2px dashed #d81b60; color: #333333; }
+.post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
+.post-body sup { top: -0.5em; }
+.post-body sub { bottom: -0.25em; }
+
+/* --------------------------------------------------------------------------
+   6. PREFORMATTED TEXT & ASCII CODE BLOCKS (Mobile Optimized)
+   -------------------------------------------------------------------------- */
+.post-body pre {
+  background-color: #f8f9fa; /* Light gray code block */
+  color: #2c3e50; 
+  font-family: "Fira Code", Consolas, Monaco, monospace;
+  font-size: 0.85rem;
+  line-height: 1.25; 
+  padding: 1.25em;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow-x: auto;
+  white-space: pre; 
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
+  margin: 1.5em 0;
+  scrollbar-width: thin;
+  scrollbar-color: #f06292 #f1f1f1;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-body code {
+  background-color: #fff0f5; /* Lavender blush / flamingo tint */
+  color: #d81b60;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.post-body pre code { background: none; color: inherit; padding: 0; }
+
+/* Pre block scrollbars */
+.post-body pre::-webkit-scrollbar { height: 6px; }
+.post-body pre::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 0 0 8px 8px; }
+.post-body pre::-webkit-scrollbar-thumb { background: #f06292; border-radius: 4px; }
+
+/* Shrink ASCII on mobile to prevent layout breaking */
+@media screen and (max-width: 600px) {
+  .post-body pre { font-size: 10px; letter-spacing: -0.4px; padding: 0.8em; }
+}
+@media screen and (max-width: 400px) {
+  .post-body pre { font-size: 8.5px; letter-spacing: -0.5px; }
+}
+
+/* --------------------------------------------------------------------------
+   7. IMAGES & FIGURES
+   -------------------------------------------------------------------------- */
+.post-body figure { margin: 1.5em 0; text-align: center; }
+.post-body img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.post-body figcaption { font-size: 0.85em; color: #777777; margin-top: 0.5em; font-style: italic; }
+
+/* --------------------------------------------------------------------------
+   8. MASTER TABLES
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2em 0;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #f9f9f9;
+}
+
+/* Custom Table Scrollbars */
+.table-responsive::-webkit-scrollbar { height: 8px; width: 8px; }
+.table-responsive::-webkit-scrollbar-track { background: #f9f9f9; border-radius: 0 0 8px 8px; }
+.table-responsive::-webkit-scrollbar-thumb { background: #cccccc; border-radius: 10px; }
+.table-responsive::-webkit-scrollbar-thumb:hover { background: #f06292; }
+
+.table-responsive table {
+  width: 100%;
+  min-width: 800px; /* Forces scroll on small screens */
+  border-collapse: collapse;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.95rem;
+  color: #333333;
+  margin: 0;
+}
+
+.table-responsive th, .table-responsive td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  text-align: left;
+  vertical-align: top; 
+  line-height: 1.5;
+}
+
+/* Header styling */
+.table-responsive th {
+  background-color: #fafafa;
+  color: #111111;
+  font-weight: 600;
+  white-space: nowrap; 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+  border-bottom: 2px solid #f06292;
+}
+
+/* Row states */
+.table-responsive td { background-color: #ffffff; white-space: normal; }
+.table-responsive tr:nth-child(even) td { background-color: #fdfdfd; }
+.table-responsive tbody tr:hover td { background-color: #fff9fa; color: #111111; transition: 0.2s ease; }
+
+/* Border cleanups */
+.table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
+.table-responsive tr:last-child td { border-bottom: none; }
+
+@media screen and (max-width: 768px) {
+  .table-responsive table { font-size: 0.9rem; }
+  .table-responsive th, .table-responsive td { padding: 10px 12px; }
+}
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVE HTML FLOWCHART
+   -------------------------------------------------------------------------- */
+.flowchart-container {
+  display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 2rem 0; font-family: -apple-system, sans-serif;
+}
+.flow-card {
+  background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); width: 100%; max-width: 280px;
+}
+.flow-card.primary { border-color: #f06292; background-color: #fff9fa; }
+.flow-card h4 { margin: 0 0 4px 0; font-size: 0.95rem; color: #111111; text-transform: uppercase; letter-spacing: 0.05em; }
+.flow-card p { margin: 0; font-size: 0.8rem; color: #666666; line-height: 1.3; }
+.flow-connector { display: flex; flex-direction: column; align-items: center; color: #d81b60; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
+.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #f06292; }
+.flow-row { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+
+/* Flowchart Desktop Layout */
+@media screen and (min-width: 650px) {
+  .flow-row { flex-direction: row; justify-content: center; gap: 20px; }
+  .flow-row .flow-card { max-width: 260px; }
+  .flow-row .flow-connector { flex-direction: row; }
+}
