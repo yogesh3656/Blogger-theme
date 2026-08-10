@@ -1,0 +1,263 @@
+/* ==========================================================================
+   BLOGGER CONTEMPO DARK - MASTER POST STYLESHEET
+   Optimized for readability, data-heavy tables, and technical formatting
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. BASE TYPOGRAPHY & LAYOUT
+   -------------------------------------------------------------------------- */
+.post-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #e8eaed; /* Soft light gray to prevent eye strain on dark backgrounds */
+  line-height: 1.7;
+  font-size: 1.05rem;
+  word-wrap: break-word;
+}
+
+/* Paragraphs */
+.post-body p {
+  margin: 0 0 1.2em 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. HEADINGS (Hierarchical & Responsive)
+   -------------------------------------------------------------------------- */
+.post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
+  font-family: "Georgia", serif;
+  line-height: 1.3;
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  color: #ffffff;
+}
+
+.post-body h2 {
+  font-size: 1.8em;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Clean separator line */
+  padding-bottom: 0.4em;
+  color: #ff6b6b; /* Premium coral/crimson accent */
+}
+
+.post-body h3 {
+  font-size: 1.4em;
+  border-left: 4px solid #ff6b6b;
+  padding-left: 12px;
+  background: linear-gradient(90deg, rgba(255,107,107,0.1) 0%, rgba(34,34,34,0) 100%);
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.post-body h4 { font-size: 1.25em; color: #ff8787; }
+.post-body h5 { font-size: 1.1em; color: #e8eaed; text-transform: uppercase; letter-spacing: 0.05em; }
+.post-body h6 { font-size: 1em; color: #9aa0a6; font-style: italic; }
+
+@media (max-width: 600px) {
+  .post-body h2 { font-size: 1.5em; }
+  .post-body h3 { font-size: 1.25em; border-left: none; padding-left: 0; background: none; }
+  .post-body h4 { font-size: 1.1em; }
+}
+
+/* --------------------------------------------------------------------------
+   3. LINKS & LISTS
+   -------------------------------------------------------------------------- */
+.post-body a {
+  color: #ff8787;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 135, 135, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.post-body a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.post-body ul, .post-body ol {
+  margin: 0 0 1.5em 1.5em;
+  padding: 0;
+}
+
+.post-body li {
+  margin-bottom: 0.5em;
+}
+
+.post-body ul li::marker { color: #ff6b6b; font-size: 1.2em; }
+.post-body ol li::marker { color: #ff6b6b; font-weight: bold; }
+
+/* --------------------------------------------------------------------------
+   4. BLOCKQUOTES (For callouts and important notes)
+   -------------------------------------------------------------------------- */
+.post-body blockquote {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  color: #cfd8dc;
+  background-color: #262626;
+  border-left: 4px solid #ff6b6b;
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.post-body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. INLINE TEXT FORMATTING
+   -------------------------------------------------------------------------- */
+.post-body strong { color: #ffffff; font-weight: 700; }
+.post-body em { color: #ff8787; font-style: italic; }
+
+.post-body abbr { text-decoration: underline dotted #9aa0a6; cursor: help; }
+
+.post-body kbd {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.85em;
+  box-shadow: 0 2px 0 #000; /* Gives a physical key look */
+}
+
+.post-body mark {
+  background-color: rgba(255, 107, 107, 0.25);
+  color: #ffffff;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.post-body del { color: #7f8c8d; text-decoration-color: #ff6b6b; }
+.post-body ins { text-decoration: none; border-bottom: 2px dashed #ff8787; }
+.post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
+.post-body sup { top: -0.5em; }
+.post-body sub { bottom: -0.25em; }
+
+/* --------------------------------------------------------------------------
+   6. PREFORMATTED TEXT & CODE (Crucial for your ASCII Flowcharts)
+   -------------------------------------------------------------------------- */
+.post-body pre {
+  background-color: #141414;
+  color: #a8c7fa; /* Soft blue for diagrams/code */
+  font-family: "Fira Code", Consolas, Monaco, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 1.5em;
+  border-radius: 8px;
+  border: 1px solid #333;
+  overflow-x: auto;
+  white-space: pre; /* Keeps ASCII art aligned perfectly */
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+  margin: 1.5em 0;
+}
+
+.post-body code {
+  background-color: #2a2a2a;
+  color: #ff8787;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.post-body pre code { background: none; color: inherit; padding: 0; } /* Resets code inside pre */
+
+/* --------------------------------------------------------------------------
+   7. IMAGES & FIGURES
+   -------------------------------------------------------------------------- */
+.post-body figure { margin: 1.5em 0; text-align: center; }
+.post-body img { max-width: 100%; height: auto; border-radius: 8px; }
+.post-body figcaption {
+  font-size: 0.85em;
+  color: #9aa0a6;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* Horizontal Rule */
+.post-body hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+  margin: 2.5em 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. MASTER TABLES (Designed for heavy text/data matrices)
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2em 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  -webkit-overflow-scrolling: touch;
+  
+  /* Firefox Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #555 #141414;
+}
+
+/* Chrome/Safari slim scrollbar for tables */
+.table-responsive::-webkit-scrollbar { height: 8px; width: 8px; }
+.table-responsive::-webkit-scrollbar-track { background: #141414; border-radius: 0 0 8px 8px; }
+.table-responsive::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+.table-responsive::-webkit-scrollbar-thumb:hover { background: #ff6b6b; }
+
+.table-responsive table {
+  width: 100%;
+  min-width: 800px; /* Ensures columns have room to breathe; triggers scroll on mobile */
+  border-collapse: collapse;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.95rem;
+  color: #e8eaed;
+}
+
+.table-responsive th, .table-responsive td {
+  padding: 14px 16px;
+  border: 1px solid #333;
+  text-align: left;
+  vertical-align: top; /* Keeps heavy text aligned to the top */
+  line-height: 1.5;
+}
+
+/* Table Headers */
+.table-responsive th {
+  background-color: #111;
+  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap; /* Keeps header titles on one line */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
+  border-bottom: 2px solid #ff6b6b; /* Accent bottom border */
+}
+
+/* Table Data Cells */
+.table-responsive td {
+  background-color: #1e1e1e;
+  white-space: normal; /* Allows long text (like dietary instructions) to wrap safely */
+}
+
+/* Zebra Striping */
+.table-responsive tr:nth-child(even) td { background-color: #242424; }
+
+/* Subtle Hover Effect */
+.table-responsive tbody tr:hover td {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Remove outer double borders */
+.table-responsive th:first-child, .table-responsive td:first-child { border-left: none; }
+.table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
+.table-responsive tr:last-child td { border-bottom: none; }
+
+/* Mobile Tweaks for Tables */
+@media screen and (max-width: 768px) {
+  .table-responsive table { font-size: 0.9rem; }
+  .table-responsive th, .table-responsive td { padding: 10px 12px; }
+}
