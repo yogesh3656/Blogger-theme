@@ -1,0 +1,301 @@
+/* ==========================================================================
+   BLOGGER CONTEMPO DARK - COMPLETE TABLE STYLESHEET
+   ========================================================================== */
+
+/* 1. CONTAINER & THEME VARIABLES
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  /* Contempo Dark Palette Variables */
+  --tbl-bg: #1e1e1e;
+  --tbl-bg-alt: #252525;
+  --tbl-bg-header: #141414;
+  --tbl-bg-footer: #181818;
+  --tbl-bg-hover: #323232;
+  --tbl-bg-active: #3d2c29; /* Subtle accent-tinted active row */
+  --tbl-border: #333333;
+  --tbl-border-header: #444444;
+  --tbl-text: #e0e0e0;
+  --tbl-text-muted: #9e9e9e;
+  --tbl-text-header: #ffffff;
+  --tbl-accent: #ff6f61; /* Contempo Dark signature accent color */
+  
+  /* Scrollbar Variables */
+  --tbl-scrollbar-track: #121212;
+  --tbl-scrollbar-thumb: #444444;
+  --tbl-scrollbar-thumb-hover: #ff6f61;
+
+  /* Layout */
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid var(--tbl-border);
+  background-color: var(--tbl-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Firefox Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--tbl-scrollbar-thumb) var(--tbl-scrollbar-track);
+  
+  /* Smooth Momentum Scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 2. CUSTOM SLIM SCROLLBAR (Webkit: Chrome, Safari, Edge, Opera)
+   -------------------------------------------------------------------------- */
+.table-responsive::-webkit-scrollbar {
+  height: 6px; /* Ultra-thin horizontal scrollbar */
+  width: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: var(--tbl-scrollbar-track);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: var(--tbl-scrollbar-thumb);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tbl-scrollbar-thumb-hover);
+}
+
+/* 3. BASE TABLE STRUCTURE
+   -------------------------------------------------------------------------- */
+.table-responsive table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 0.95rem;
+  color: var(--tbl-text);
+  background-color: transparent;
+  table-layout: auto;
+  margin: 0;
+}
+
+/* Table Caption */
+.table-responsive table caption {
+  caption-side: bottom;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  color: var(--tbl-text-muted);
+  text-align: left;
+  font-style: italic;
+  border-top: 1px solid var(--tbl-border);
+  background-color: var(--tbl-bg-header);
+}
+
+/* 4. HEADER CELLS (thead / th)
+   -------------------------------------------------------------------------- */
+.table-responsive thead {
+  background-color: var(--tbl-bg-header);
+}
+
+.table-responsive th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--tbl-bg-header);
+  color: var(--tbl-text-header);
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  border-bottom: 2px solid var(--tbl-border-header);
+  border-right: 1px solid var(--tbl-border);
+}
+
+/* 5. DATA CELLS (tbody / td)
+   -------------------------------------------------------------------------- */
+.table-responsive td {
+  padding: 12px 16px;
+  color: var(--tbl-text);
+  border-bottom: 1px solid var(--tbl-border);
+  border-right: 1px solid var(--tbl-border);
+  line-height: 1.6;
+  vertical-align: middle;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Prevent right border overflow on last column */
+.table-responsive th:last-child,
+.table-responsive td:last-child {
+  border-right: none;
+}
+
+/* Prevent bottom border overflow on last row */
+.table-responsive tr:last-child td {
+  border-bottom: none;
+}
+
+/* 6. ROW STATES (Zebra, Hover, Active, Highlight)
+   -------------------------------------------------------------------------- */
+/* Zebra Striping */
+.table-responsive tbody tr:nth-child(even) td {
+  background-color: var(--tbl-bg-alt);
+}
+
+/* Hover Effect */
+.table-responsive tbody tr:hover td {
+  background-color: var(--tbl-bg-hover);
+  color: #ffffff;
+}
+
+/* Explicit Active / Selected Row State (<tr class="active"> or <tr class="is-selected">) */
+.table-responsive tbody tr.active td,
+.table-responsive tbody tr.is-selected td {
+  background-color: var(--tbl-bg-active);
+  border-left: 3px solid var(--tbl-accent);
+}
+
+/* Highlight Individual Cell (<td class="highlight">) */
+.table-responsive td.highlight {
+  background-color: rgba(255, 111, 97, 0.15);
+  color: var(--tbl-accent);
+  font-weight: 600;
+}
+
+/* 7. FOOTER CELLS (tfoot)
+   -------------------------------------------------------------------------- */
+.table-responsive tfoot {
+  background-color: var(--tbl-bg-footer);
+  font-weight: 600;
+}
+
+.table-responsive tfoot td,
+.table-responsive tfoot th {
+  padding: 12px 16px;
+  color: var(--tbl-text-header);
+  border-top: 2px solid var(--tbl-border-header);
+  border-right: 1px solid var(--tbl-border);
+}
+
+/* 8. ALIGNMENT & NUMERIC UTILITIES
+   -------------------------------------------------------------------------- */
+.table-responsive .text-center { text-align: center; }
+.table-responsive .text-right  { text-align: right; }
+.table-responsive .text-left   { text-align: left; }
+
+/* Numeric Columns (Monospaced alignment) */
+.table-responsive .num,
+.table-responsive td.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* 9. IN-TABLE HTML ELEMENTS STYLING
+   -------------------------------------------------------------------------- */
+/* Links inside tables */
+.table-responsive td a {
+  color: var(--tbl-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--tbl-accent);
+  transition: opacity 0.2s ease;
+}
+
+.table-responsive td a:hover {
+  opacity: 0.8;
+  border-bottom-style: solid;
+}
+
+/* Inline Code inside cells */
+.table-responsive td code {
+  background-color: #121212;
+  color: #f8f8f2;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  border: 1px solid #333333;
+}
+
+/* Status Badges inside cells (<span class="badge badge-success">...) */
+.table-responsive .badge {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.table-responsive .badge-success { background-color: rgba(76, 175, 80, 0.2); color: #81c784; border: 1px solid #4caf50; }
+.table-responsive .badge-warning { background-color: rgba(255, 152, 0, 0.2); color: #ffb74d; border: 1px solid #ff9800; }
+.table-responsive .badge-danger  { background-color: rgba(244, 67, 54, 0.2); color: #e57373; border: 1px solid #f44336; }
+.table-responsive .badge-info    { background-color: rgba(33, 150, 243, 0.2); color: #64b5f6; border: 1px solid #2196f3; }
+
+/* Checkboxes / Inputs inside cells */
+.table-responsive input[type="checkbox"],
+.table-responsive input[type="radio"] {
+  accent-color: var(--tbl-accent);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* Images inside cells */
+.table-responsive td img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+/* 10. ACCESSIBILITY & FOCUS STATES
+   -------------------------------------------------------------------------- */
+.table-responsive a:focus-visible,
+.table-responsive button:focus-visible {
+  outline: 2px solid var(--tbl-accent);
+  outline-offset: 2px;
+}
+
+/* 11. MOBILE RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .table-responsive table {
+    font-size: 0.88rem;
+    min-width: 600px; /* Forces horizontal scroll on narrow screens instead of crushing content */
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    padding: 10px 12px;
+  }
+}
+
+/* 12. PRINT OPTIMIZATION (Inverts colors for clean paper printing)
+   -------------------------------------------------------------------------- */
+@media print {
+  .table-responsive {
+    box-shadow: none;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+  }
+
+  .table-responsive table {
+    color: #000;
+  }
+
+  .table-responsive th {
+    background-color: #eee;
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+
+  .table-responsive td {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #ccc;
+  }
+}
