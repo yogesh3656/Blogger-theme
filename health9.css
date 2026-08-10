@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BLOGGER CONTEMPO DARK - MASTER STYLESHEET (VEGGIE & FRUIT THEME)
-   Theme: Nature Dark (Leaf Greens, Carrot, Berry & Citrus Accents)
+   BLOGGER CONTEMPO DARK - MASTER STYLESHEET (VEGGIE GARDEN THEME)
+   Theme: Rich Soil Dark with Leafy Greens, Tomato Red, and Carrot Accents
    Features: Responsive Tables & Strict Mobile ASCII Diagram Protection
    ========================================================================== */
 
@@ -9,7 +9,7 @@
    -------------------------------------------------------------------------- */
 .post-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #f0fdf4; /* Very soft mint-white for fresh, easy reading */
+  color: #f0fdf4; /* Crisp cabbage-white for easy reading */
   line-height: 1.7;
   font-size: 1.05rem;
   word-wrap: break-word;
@@ -20,7 +20,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. HEADINGS (Hierarchical & Colorful)
+   2. HEADINGS (Hierarchical Veggie Palette)
    -------------------------------------------------------------------------- */
 .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
   font-family: "Georgia", serif;
@@ -33,23 +33,23 @@
 .post-body h2 {
   font-size: 1.8em;
   text-align: left;
-  border-bottom: 2px solid #166534; /* Deep forest green */
+  border-bottom: 2px solid #ff6347; /* Tomato Red bottom border */
   padding-bottom: 0.4em;
-  color: #4ade80; /* Vibrant Leaf Green */
+  color: #4ade80; /* Vibrant Lettuce Green */
 }
 
 .post-body h3 {
   font-size: 1.4em;
-  border-left: 4px solid #4ade80;
+  border-left: 4px solid #4ade80; /* Leafy Green border */
   padding-left: 12px;
   background: linear-gradient(90deg, rgba(74,222,128,0.12) 0%, rgba(34,34,34,0) 100%);
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-.post-body h4 { font-size: 1.25em; color: #fb923c; } /* Carrot Orange */
-.post-body h5 { font-size: 1.1em; color: #fef08a; text-transform: uppercase; letter-spacing: 0.05em; } /* Lemon Yellow */
-.post-body h6 { font-size: 1em; color: #9aa0a6; font-style: italic; }
+.post-body h4 { font-size: 1.25em; color: #ff6347; } /* Tomato Red text */
+.post-body h5 { font-size: 1.1em; color: #facc15; text-transform: uppercase; letter-spacing: 0.05em; } /* Sweet Corn Yellow */
+.post-body h6 { font-size: 1em; color: #9ca3af; font-style: italic; } /* Muted Sage Green */
 
 @media (max-width: 600px) {
   .post-body h2 { font-size: 1.5em; }
@@ -61,15 +61,15 @@
    3. LINKS & LISTS
    -------------------------------------------------------------------------- */
 .post-body a {
-  color: #6ee7b7; /* Soft Mint Green */
+  color: #4ade80; /* Leafy Green */
   text-decoration: none;
-  border-bottom: 1px solid rgba(110, 231, 183, 0.4);
+  border-bottom: 1px solid rgba(74, 222, 128, 0.4);
   transition: all 0.2s ease-in-out;
 }
 
 .post-body a:hover {
-  color: #ffffff;
-  border-bottom-color: #4ade80;
+  color: #ff6347; /* Hovers to Tomato Red */
+  border-bottom-color: #ff6347;
 }
 
 .post-body ul, .post-body ol {
@@ -78,8 +78,8 @@
 }
 
 .post-body li { margin-bottom: 0.5em; }
-.post-body ul li::marker { color: #4ade80; font-size: 1.2em; }
-.post-body ol li::marker { color: #fb923c; font-weight: bold; } /* Orange numbers */
+.post-body ul li::marker { color: #4ade80; font-size: 1.2em; } /* Green bullets */
+.post-body ol li::marker { color: #f97316; font-weight: bold; } /* Carrot Orange numbers */
 
 /* --------------------------------------------------------------------------
    4. BLOCKQUOTES & HORIZONTAL RULES
@@ -88,8 +88,8 @@
   font-family: "Georgia", serif;
   font-style: italic;
   color: #d1fae5;
-  background-color: #111827; /* Dark backdrop to make the green pop */
-  border-left: 4px solid #4ade80;
+  background-color: #064e3b; /* Deep Kale background */
+  border-left: 4px solid #ff6347; /* Tomato Red accent line */
   margin: 1.5em 0;
   padding: 1.2em 1.5em;
   border-radius: 0 8px 8px 0;
@@ -101,32 +101,32 @@
 .post-body hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(74,222,128,0), rgba(74,222,128,0.3), rgba(74,222,128,0));
+  background-image: linear-gradient(to right, rgba(255,99,71,0), rgba(255,99,71,0.4), rgba(255,99,71,0)); /* Faded Tomato line */
   margin: 2.5em 0;
 }
 
 /* --------------------------------------------------------------------------
-   5. INLINE TEXT ELEMENTS (Vibrant Fruit Accents)
+   5. INLINE TEXT ELEMENTS (Vibrant Veggie Accents)
    -------------------------------------------------------------------------- */
 .post-body strong { color: #ffffff; font-weight: 700; }
-.post-body em { color: #f472b6; font-style: italic; } /* Berry Pink for emphasis */
-.post-body abbr { text-decoration: underline dotted #9aa0a6; cursor: help; color: #6ee7b7; }
-.post-body cite, .post-body dfn { font-style: italic; color: #fcd34d; }
-.post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #86efac; }
+.post-body em { color: #d946ef; font-style: italic; } /* Beetroot Purple for emphasis */
+.post-body abbr { text-decoration: underline dotted #9ca3af; cursor: help; color: #4ade80; }
+.post-body cite, .post-body dfn { font-style: italic; color: #facc15; } /* Corn Yellow */
+.post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #86efac; } /* Celery Green */
 
 .post-body kbd {
-  background-color: #1a1a1a;
+  background-color: #1a1f1c; /* Dark soil background */
   color: #ffffff;
-  border: 1px solid #444444;
+  border: 1px solid #4ade80;
   border-radius: 4px;
   padding: 2px 6px;
   font-family: Consolas, Monaco, monospace;
   font-size: 0.85em;
-  box-shadow: 0 2px 0 #000000;
+  box-shadow: 0 2px 0 #064e3b;
 }
 
-.post-body mark { background-color: #fef08a; color: #111827; padding: 0 4px; border-radius: 2px; font-weight: 600;} /* Bright Lemon highlight */
-.post-body del { color: #8b949e; text-decoration-color: #ef4444; } /* Tomato Red for deleted */
+.post-body mark { background-color: #fef08a; color: #143621; padding: 0 4px; border-radius: 2px; font-weight: 600;} /* Bright Lemon highlight with dark green text */
+.post-body del { color: #9ca3af; text-decoration-color: #ff6347; } /* Tomato Red strikethrough */
 .post-body ins { text-decoration: none; border-bottom: 2px dashed #4ade80; color: #ffffff; } 
 .post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
 .post-body sup { top: -0.5em; }
@@ -137,7 +137,7 @@
    -------------------------------------------------------------------------- */
 .post-body pre {
   display: block !important;
-  background-color: #111812; /* Deep forest tint */
+  background-color: #141a16; /* Very dark green-grey (Rich Soil) */
   color: #a7f3d0; /* Soft mint text */
   
   /* System Font Stack for rigid monospace spacing */
@@ -163,13 +163,13 @@
   
   padding: 1.5em;
   border-radius: 8px;
-  border: 1px solid #166534;
+  border: 1px solid #22c55e; /* Vibrant Green Border */
   margin: 1.5em 0;
   box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
   
-  /* Neutral Scrollbars */
+  /* Neutral Scrollbars to not distract from content */
   scrollbar-width: thin;
-  scrollbar-color: #555555 #111812;
+  scrollbar-color: #555555 #141a16;
 }
 
 /* Forces inner element to act as an unbreakable canvas */
@@ -184,8 +184,8 @@
 }
 
 .post-body code {
-  background-color: #27272a;
-  color: #fb923c; /* Carrot orange for inline code */
+  background-color: #1a1f1c; /* Soil background */
+  color: #ff6347; /* Tomato red for inline code */
   font-family: Consolas, Monaco, monospace;
   font-size: 0.9em;
   padding: 2px 6px;
@@ -194,7 +194,7 @@
 
 /* Neutral Pre Scrollbar Webkit */
 .post-body pre::-webkit-scrollbar { height: 8px; }
-.post-body pre::-webkit-scrollbar-track { background: #111812; border-radius: 0 0 8px 8px; }
+.post-body pre::-webkit-scrollbar-track { background: #141a16; border-radius: 0 0 8px 8px; }
 .post-body pre::-webkit-scrollbar-thumb { background: #555555; border-radius: 4px; }
 .post-body pre::-webkit-scrollbar-thumb:hover { background: #777777; }
 
@@ -202,8 +202,8 @@
    7. IMAGES & FIGURES
    -------------------------------------------------------------------------- */
 .post-body figure { margin: 1.5em 0; text-align: center; }
-.post-body img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #333; }
-.post-body figcaption { font-size: 0.85em; color: #a7f3d0; margin-top: 0.5em; font-style: italic; }
+.post-body img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #166534; }
+.post-body figcaption { font-size: 0.85em; color: #86efac; margin-top: 0.5em; font-style: italic; }
 
 /* --------------------------------------------------------------------------
    8. MASTER TABLES
@@ -213,7 +213,7 @@
   overflow-x: auto;
   margin: 2em 0;
   border-radius: 8px;
-  border: 1px solid #166534;
+  border: 1px solid #166534; /* Dark Kale Border */
   background-color: #1a1a1a;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   -webkit-overflow-scrolling: touch;
@@ -250,20 +250,20 @@
 
 /* Header styling */
 .table-responsive th {
-  background-color: #064e3b; /* Deep rich green header */
+  background-color: #064e3b; /* Deep Kale background */
   color: #ffffff;
   font-weight: 600;
   white-space: nowrap; 
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.85em;
-  border-bottom: 2px solid #4ade80; /* Vibrant green accent */
+  border-bottom: 2px solid #ff6347; /* Tomato Red divider */
 }
 
 /* Row states */
-.table-responsive td { background-color: #18181b; white-space: normal; }
-.table-responsive tr:nth-child(even) td { background-color: #27272a; }
-.table-responsive tbody tr:hover td { background-color: #166534; color: #ffffff; transition: 0.2s ease; } /* Dark green hover */
+.table-responsive td { background-color: #141a16; white-space: normal; } /* Soil dark */
+.table-responsive tr:nth-child(even) td { background-color: #1a1f1c; }
+.table-responsive tbody tr:hover td { background-color: #166534; color: #ffffff; transition: 0.2s ease; } /* Kale hover */
 
 /* Border cleanups */
 .table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
@@ -278,16 +278,16 @@
    9. RESPONSIVE HTML FLOWCHART COMPONENT
    -------------------------------------------------------------------------- */
 .flowchart-container { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 2rem 0; font-family: -apple-system, sans-serif; }
-.flow-card { background-color: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); width: 100%; max-width: 280px; }
+.flow-card { background-color: #141a16; border: 1px solid #166534; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); width: 100%; max-width: 280px; }
 
 /* Updated Primary Flowchart Card */
-.flow-card.primary { border-color: #4ade80; background-color: #064e3b; }
+.flow-card.primary { border-color: #ff6347; background-color: #064e3b; } /* Kale with Tomato border */
 
 .flow-card h4 { margin: 0 0 4px 0; font-size: 0.95rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; }
 .flow-card p { margin: 0; font-size: 0.8rem; color: #a7f3d0; line-height: 1.3; }
 
-.flow-connector { display: flex; flex-direction: column; align-items: center; color: #6ee7b7; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
-.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #4ade80; }
+.flow-connector { display: flex; flex-direction: column; align-items: center; color: #4ade80; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
+.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #ff6347; } /* Tomato arrows */
 
 .flow-row { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
 
