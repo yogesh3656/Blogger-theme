@@ -286,3 +286,63 @@
   .flow-row .flow-card { max-width: 260px; }
   .flow-row .flow-connector { flex-direction: row; }
 }
+
+
+-------------
+
+pre {
+  display: block !important;
+  
+  /* Enables smooth horizontal scrolling on mobile screens */
+  overflow-x: auto !important; 
+  -webkit-overflow-scrolling: touch !important;
+  
+  /* Forces strict grid alignment to handle mixed spaces and non-breaking spaces (&nbsp;) */
+  white-space: pre !important; 
+  
+  /* Courier New ensures standard and non-breaking spaces match widths precisely on mobile */
+  font-family: "Courier New", Courier, ui-monospace, SFMono-Regular, Consolas, monospace !important;
+  
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  
+  /* Stops mobile browsers from inflating text sizes unevenly */
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  
+  /* Locks spacing to protect box borders */
+  word-spacing: 0 !important;
+  letter-spacing: 0 !important;
+  font-variant-ligatures: none !important;
+  
+  /* Clean dark theme styling with harmonious text color */
+  background-color: #141414 !important;
+  color: #a8c7fa !important;
+  padding: 1.25em !important;
+  border: 1px solid #333333 !important;
+  border-radius: 8px !important;
+  margin: 1.5em 0 !important;
+  
+  /* Neutral scrollbar styling (sleek grays instead of red) */
+  scrollbar-width: thin !important;
+  scrollbar-color: #555555 #1a1a1a !important;
+}
+
+/* Neutral Webkit scrollbars for Chrome, Safari, and Edge */
+pre::-webkit-scrollbar { 
+  height: 8px !important; 
+}
+
+pre::-webkit-scrollbar-track { 
+  background: #1a1a1a !important; 
+  border-radius: 0 0 8px 8px !important; 
+}
+
+pre::-webkit-scrollbar-thumb { 
+  background: #555555 !important; 
+  border-radius: 4px !important; 
+}
+
+pre::-webkit-scrollbar-thumb:hover { 
+  background: #777777 !important; 
+}
