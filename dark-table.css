@@ -1,8 +1,34 @@
-/* Scrollable container if table overflows */
+/* Scrollable container with modern dark styling */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
-  margin: 1em 0;
+  margin: 1.5em 0;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Subtle depth */
+  background-color: #222222; 
+  border: 1px solid #444444; /* Clean outer border */
+  
+  /* Firefox Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #555555 #1a1a1a;
+}
+
+/* Custom Webkit Scrollbar (Chrome, Safari, Edge) */
+.table-responsive::-webkit-scrollbar {
+  height: 8px; /* Slims down the horizontal scrollbar */
+  width: 8px;  
+}
+.table-responsive::-webkit-scrollbar-track {
+  background: #1a1a1a; 
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #555555; 
+  border-radius: 10px; /* Pill-shaped scroll indicator */
+}
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background-color: #777777; /* Lighter on hover */
 }
 
 /* Base table styling */
@@ -10,47 +36,62 @@
   width: 100%;
   border-collapse: collapse;
   font-family: sans-serif;
-  color: #e8eaed; /* Light gray text for dark theme */
+  color: #e8eaed; 
   background-color: transparent;
   table-layout: auto;
+  margin: 0; /* Prevents overflow pushing */
 }
 
 /* Header cells */
 .table-responsive th {
-  background-color: #1a1a1a; /* Darker header background */
+  background-color: #1a1a1a; 
   color: #ffffff;
   text-align: left;
-  padding: 12px;
+  padding: 14px 16px; /* Slightly taller header */
   font-weight: 600;
   white-space: nowrap; 
-  border: 1px solid #444444; /* Border added to match body cells */
+  border-bottom: 2px solid #555555; /* Stronger separation for header */
+  border-right: 1px solid #444444;
+}
+
+/* Remove right border on the last column to prevent double borders */
+.table-responsive th:last-child,
+.table-responsive td:last-child {
+  border-right: none;
 }
 
 /* Data cells */
 .table-responsive td {
-  border: 1px solid #444444; /* Muted dark gray borders */
+  border-bottom: 1px solid #444444; 
+  border-right: 1px solid #444444; 
   padding: 12px 16px;
-  background-color: #222222; /* Core dark background */
+  background-color: #222222; 
   color: #e8eaed;
   white-space: normal;
   word-break: keep-all; 
   line-height: 1.6;
+  transition: background-color 0.25s ease; /* Smooth hover fade */
 }
 
-/* Zebra striping for better scanability */
+/* Remove bottom border from the very last row */
+.table-responsive tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra striping */
 .table-responsive tr:nth-child(even) td {
-  background-color: #2a2a2a; /* Slightly elevated dark tone */
+  background-color: #2a2a2a; 
 }
 
-/* Optional: Hover effect to help focus */
+/* Smooth hover effect */
 .table-responsive tbody tr:hover td {
-  background-color: #383838; /* Noticeable but subtle hover state */
+  background-color: #383838; 
 }  
 
 /* Mobile tweaks */
 @media screen and (max-width: 768px) {
   .table-responsive table {
     font-size: 15px;
-    min-width: 100%;
+    min-width: max-content; /* Ensures columns don't crush on tiny screens */
   }
 }
