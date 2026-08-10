@@ -1,6 +1,7 @@
 /* ==========================================================================
-   BLOGGER CONTEMPO DARK - MASTER POST STYLESHEET
-   Comprehensive styling for readability, heavy data, and strict ASCII diagrams
+   BLOGGER CONTEMPO DARK - COMPLETE MASTER STYLESHEET
+   Supports all post typography, responsive tables, and mobile ASCII diagrams
+   Theme: Modern Sapphire & Neutral Dark
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -8,7 +9,7 @@
    -------------------------------------------------------------------------- */
 .post-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #e8eaed; /* Soft light gray for dark backgrounds */
+  color: #e8eaed; /* Soft off-white to eliminate eye strain */
   line-height: 1.7;
   font-size: 1.05rem;
   word-wrap: break-word;
@@ -34,19 +35,19 @@
   text-align: left;
   border-bottom: 1px solid #444444; 
   padding-bottom: 0.4em;
-  color: #ff6b6b; /* Premium coral/crimson accent */
+  color: #4db8ff; /* Vibrant soft blue signature accent */
 }
 
 .post-body h3 {
   font-size: 1.4em;
-  border-left: 4px solid #ff6b6b;
+  border-left: 4px solid #4db8ff;
   padding-left: 12px;
-  background: linear-gradient(90deg, rgba(255,107,107,0.1) 0%, rgba(34,34,34,0) 100%);
+  background: linear-gradient(90deg, rgba(77,184,255,0.1) 0%, rgba(34,34,34,0) 100%);
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-.post-body h4 { font-size: 1.25em; color: #ff8787; }
+.post-body h4 { font-size: 1.25em; color: #79c0ff; }
 .post-body h5 { font-size: 1.1em; color: #e8eaed; text-transform: uppercase; letter-spacing: 0.05em; }
 .post-body h6 { font-size: 1em; color: #9aa0a6; font-style: italic; }
 
@@ -60,9 +61,9 @@
    3. LINKS & LISTS
    -------------------------------------------------------------------------- */
 .post-body a {
-  color: #ff8787;
+  color: #79c0ff;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 135, 135, 0.4);
+  border-bottom: 1px solid rgba(121, 192, 255, 0.4);
   transition: all 0.2s ease-in-out;
 }
 
@@ -77,8 +78,8 @@
 }
 
 .post-body li { margin-bottom: 0.5em; }
-.post-body ul li::marker { color: #ff6b6b; font-size: 1.2em; }
-.post-body ol li::marker { color: #ff6b6b; font-weight: bold; }
+.post-body ul li::marker { color: #4db8ff; font-size: 1.2em; }
+.post-body ol li::marker { color: #4db8ff; font-weight: bold; }
 
 /* --------------------------------------------------------------------------
    4. BLOCKQUOTES & HORIZONTAL RULES
@@ -88,7 +89,7 @@
   font-style: italic;
   color: #cfd8dc;
   background-color: #262626;
-  border-left: 4px solid #ff6b6b;
+  border-left: 4px solid #4db8ff;
   margin: 1.5em 0;
   padding: 1.2em 1.5em;
   border-radius: 0 8px 8px 0;
@@ -108,9 +109,9 @@
    5. INLINE TEXT ELEMENTS (Semantics & Formatting)
    -------------------------------------------------------------------------- */
 .post-body strong { color: #ffffff; font-weight: 700; }
-.post-body em { color: #ff8787; font-style: italic; }
-.post-body abbr { text-decoration: underline dotted #9aa0a6; cursor: help; color: #ff8787;}
-.post-body cite, .post-body dfn { font-style: italic; color: #ffb8b8; }
+.post-body em { color: #c690f0; font-style: italic; } /* Soft purple for emphasis */
+.post-body abbr { text-decoration: underline dotted #9aa0a6; cursor: help; color: #79c0ff; }
+.post-body cite, .post-body dfn { font-style: italic; color: #a5d6ff; }
 .post-body samp, .post-body var { font-family: Consolas, Monaco, monospace; color: #a8c7fa; }
 
 .post-body kbd {
@@ -124,40 +125,37 @@
   box-shadow: 0 2px 0 #000000;
 }
 
-.post-body mark { background-color: rgba(255, 107, 107, 0.25); color: #ffffff; padding: 0 4px; border-radius: 2px; }
-.post-body del { color: #7f8c8d; text-decoration-color: #ff6b6b; }
-.post-body ins { text-decoration: none; border-bottom: 2px dashed #ff8787; color: #ffffff; }
+.post-body mark { background-color: rgba(227, 179, 65, 0.25); color: #ffd173; padding: 0 4px; border-radius: 2px; } /* Amber highlight */
+.post-body del { color: #8b949e; text-decoration-color: #ff7b72; } /* Semantic soft red for deleted */
+.post-body ins { text-decoration: none; border-bottom: 2px dashed #7ee787; color: #ffffff; } /* Semantic green for inserted */
 .post-body sup, .post-body sub { font-size: 0.75em; line-height: 0; position: relative; }
 .post-body sup { top: -0.5em; }
 .post-body sub { bottom: -0.25em; }
 
 /* --------------------------------------------------------------------------
-   6. PREFORMATTED TEXT & STRICT ASCII DIAGRAMS (MOBILE SPACE FIX)
+   6. PREFORMATTED TEXT & STRICT ASCII DIAGRAMS (Mobile Fix Integrated)
    -------------------------------------------------------------------------- */
 .post-body pre {
-  display: block;
+  display: block !important;
   background-color: #141414;
   color: #a8c7fa; 
   
-  /* STRICT Monospace: 'Courier New' handles spaces the most consistently on mobile */
-  font-family: "Courier New", Courier, monospace !important;
-  font-size: 13px !important; 
+  /* System Font Stack: Prevents mobile font substitution and box distortion */
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace !important;
+  
+  font-size: 12px !important; 
   line-height: 1.2 !important;
   
-  /* CRITICAL FIX 1: Stops mobile browsers from inflating text size unevenly */
+  /* Prevents mobile web browsers from altering font scaling dynamically */
   -webkit-text-size-adjust: 100% !important;
   text-size-adjust: 100% !important;
 
-  /* CRITICAL FIX 2: Forces spaces to remain exactly as typed without stretching */
+  /* Strict space preservation & wrapping prevention */
   white-space: pre !important; 
-  word-spacing: normal !important;
-  letter-spacing: normal !important;
-  tab-size: 4 !important;
-
-  /* Prevents text wrapping */
   word-wrap: normal !important;
-  word-break: keep-all !important;
+  word-break: normal !important;
   overflow-wrap: normal !important;
+  font-variant-ligatures: none !important;
   
   /* Enables horizontal scrolling */
   overflow-x: auto !important; 
@@ -167,28 +165,38 @@
   border: 1px solid #333333;
   margin: 1.5em 0;
   box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
-  
-  /* Smooth horizontal swipe on iOS/Android */
   -webkit-overflow-scrolling: touch;
   
-  /* Styled Scrollbars */
+  /* Neutral Custom Scrollbars */
   scrollbar-width: thin;
-  scrollbar-color: #ff6b6b #1a1a1a;
+  scrollbar-color: #555555 #1a1a1a;
 }
 
-/* Ensures any <code> tag inside <pre> inherits the strict rules */
+/* Forces inner element to act as an unbroken grid on small viewports */
 .post-body pre code {
+  display: inline-block !important; 
+  min-width: 100% !important;
   font-family: inherit !important;
   white-space: inherit !important;
-  font-size: inherit !important;
   background: none; 
   color: inherit; 
   padding: 0;
 }
 
+.post-body code {
+  background-color: #2a2a2a;
+  color: #ffa657; /* Soft orange to easily distinguish inline code from regular text */
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Neutral Pre Scrollbar Webkit */
 .post-body pre::-webkit-scrollbar { height: 8px; }
 .post-body pre::-webkit-scrollbar-track { background: #141414; border-radius: 0 0 8px 8px; }
-.post-body pre::-webkit-scrollbar-thumb { background: #ff6b6b; border-radius: 4px; }
+.post-body pre::-webkit-scrollbar-thumb { background: #555555; border-radius: 4px; }
+.post-body pre::-webkit-scrollbar-thumb:hover { background: #777777; }
 
 /* --------------------------------------------------------------------------
    7. IMAGES & FIGURES
@@ -209,18 +217,21 @@
   background-color: #1a1a1a;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   -webkit-overflow-scrolling: touch;
+  
+  /* Neutral Scrollbars */
   scrollbar-width: thin;
   scrollbar-color: #555555 #141414;
 }
 
+/* Custom Table Scrollbars (Neutral) */
 .table-responsive::-webkit-scrollbar { height: 8px; width: 8px; }
 .table-responsive::-webkit-scrollbar-track { background: #141414; border-radius: 0 0 8px 8px; }
 .table-responsive::-webkit-scrollbar-thumb { background: #444444; border-radius: 10px; }
-.table-responsive::-webkit-scrollbar-thumb:hover { background: #ff6b6b; }
+.table-responsive::-webkit-scrollbar-thumb:hover { background: #666666; }
 
 .table-responsive table {
   width: 100%;
-  min-width: 800px; /* Forces scroll on small screens */
+  min-width: 800px; /* Triggers horizontal scroll on mobile screens */
   border-collapse: collapse;
   font-family: -apple-system, sans-serif;
   font-size: 0.95rem;
@@ -237,6 +248,7 @@
   line-height: 1.5;
 }
 
+/* Header styling */
 .table-responsive th {
   background-color: #111111;
   color: #ffffff;
@@ -245,13 +257,15 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 0.85em;
-  border-bottom: 2px solid #ff6b6b;
+  border-bottom: 2px solid #4db8ff; /* Updated table header accent */
 }
 
+/* Row states */
 .table-responsive td { background-color: #1e1e1e; white-space: normal; }
 .table-responsive tr:nth-child(even) td { background-color: #242424; }
 .table-responsive tbody tr:hover td { background-color: #2d2d2d; color: #ffffff; transition: 0.2s ease; }
 
+/* Border cleanups */
 .table-responsive th:last-child, .table-responsive td:last-child { border-right: none; }
 .table-responsive tr:last-child td { border-bottom: none; }
 
@@ -261,15 +275,20 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. RESPONSIVE HTML FLOWCHART (Optional Alternative)
+   9. RESPONSIVE HTML FLOWCHART COMPONENT
    -------------------------------------------------------------------------- */
 .flowchart-container { display: flex; flex-direction: column; align-items: center; gap: 12px; margin: 2rem 0; font-family: -apple-system, sans-serif; }
 .flow-card { background-color: #1e1e1e; border: 1px solid #333333; border-radius: 8px; padding: 14px 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); width: 100%; max-width: 280px; }
-.flow-card.primary { border-color: #ff6b6b; background-color: #241c1c; }
+
+/* Updated Primary Flowchart Card */
+.flow-card.primary { border-color: #4db8ff; background-color: #18232e; }
+
 .flow-card h4 { margin: 0 0 4px 0; font-size: 0.95rem; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; }
 .flow-card p { margin: 0; font-size: 0.8rem; color: #9aa0a6; line-height: 1.3; }
-.flow-connector { display: flex; flex-direction: column; align-items: center; color: #ff8787; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
-.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #ff6b6b; }
+
+.flow-connector { display: flex; flex-direction: column; align-items: center; color: #79c0ff; font-size: 0.75rem; font-weight: 600; text-align: center; gap: 4px; }
+.flow-connector .arrow { font-size: 1.2rem; line-height: 1; color: #4db8ff; }
+
 .flow-row { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
 
 @media screen and (min-width: 650px) {
